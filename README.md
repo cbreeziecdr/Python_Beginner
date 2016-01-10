@@ -271,4 +271,65 @@ dict_values(['john', 'sales', 6734])
 
  t = '2'
 
- 
+ # membership operators
+ list_a = (1, 2, 10, 15)
+
+ list_a
+
+(1, 2, 10, 15)
+
+ 2 in list_a
+
+True
+
+ 3 in list_a
+
+False
+
+ 13 not in list_a
+
+True
+
+ 10 not in list_a
+
+False
+
+ # indentity operators
+ # identity operators
+
+ x = 2
+
+ y = 3
+
+ x is y
+
+False
+
+ z= 2
+
+ x is z
+
+True
+
+ x is not y
+
+True
+
+ # identity operators
+ # Identity operators compare the memory locations of two objects.
+
+ x and y
+
+3
+
+ y and x
+
+2
+
+ x or y
+
+2
+
+ y or x
+
+3
