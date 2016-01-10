@@ -314,9 +314,7 @@ True
 
 True
 
- # identity operators
- 
- # Identity operators compare the memory locations of two objects.
+# Identity operators compare the memory locations of two objects.
 
  x and y
 
