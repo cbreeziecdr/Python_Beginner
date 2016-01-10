@@ -294,7 +294,6 @@ True
 
 False
 
- # indentity operators
  # identity operators
 
  x = 2
@@ -316,6 +315,7 @@ True
 True
 
  # identity operators
+ 
  # Identity operators compare the memory locations of two objects.
 
  x and y
