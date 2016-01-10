@@ -1,8 +1,10 @@
 # Python_Beginner
 Testing out what I have learned thus far in coding in Python
 # testing out python code i've learned 
- # testing out python code i've learned 
- # print function
+# Use Python version 3.5.1 coding format in below lines of code
+# In below code samples, the code statement is followed by the resulting output given in Python Shell Script Interpreter
+
+# print function
 
  a = 2
 
