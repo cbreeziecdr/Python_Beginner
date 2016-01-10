@@ -5,11 +5,13 @@ Testing out what I have learned thus far in coding in Python
  a = 2
 
  print (a)
+ 
 2
 
  b = '2'
 
  print (b)
+
 2
 
  c = 'hello'
@@ -17,12 +19,15 @@ Testing out what I have learned thus far in coding in Python
  d = a + int(str(b))
 
  print(d)
+
 4
 
  print(a * 2)
+
 4
 
  e = 'hello'
 
  print (e * 3) # string variable multiplication, print function
+
 hellohellohello
