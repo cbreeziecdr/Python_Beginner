@@ -1507,248 +1507,452 @@ False
 # The method isspace() checks whether the string consists of whitespace.
 
 # Built-in String Methods
+
 ####
+
 # String istitle() Method
-# The method istitle() checks whether all the case-based characters in the string following non-casebased letters are uppercase and all other case-based characters are lowercase.
-3 str.istitle()
-SyntaxError: invalid syntax
+
+# The method istitle() checks whether all the case-based characters in the string following non-casebased letters are 
+uppercase and all other case-based characters are lowercase.
+
 # str.istitle()
+
 # This method returns true if the string is a titlecased string and there is at least one character, for example uppercase characters may only follow uncased characters and lowercase characters only cased ones.It returns false otherwise.
+
 str = "The University of Greatness";
+
 print (str.istitle())
+
 False
+
 str2 = "The university of greatness";
+
 print (str2.istitle())
+
 False
+
 str = "The University Of Greatness";
+
 print (str.istitle())
+
 True
+
 # String isupper() Method
+
 # The method isupper() checks whether all the case-based characters (letters) of the string are uppercase.
+
 # str.isupper()
-# This method returns true if all cased characters in the string are uppercase and there is at least one cased character, false otherwise.
+
+# This method returns true if all cased characters in the string are uppercase and there is at least one cased character, 
+false otherwise.
+
 str = "THIS IS STRING EXAMPLE....WOW!!!";
+
 print (str.isupper())
+
 True
+
 var = "Upper downer flat"
+
 print (var.isupper())
+
 False
+
 # String join() Method
+
 # The method join() returns a string in which the string elements of sequence have been joined by str separator.
+
 # str.join(sequence)
+
 # This method returns a string, which is the concatenation of the strings in the sequence seq. The separator between elements is the string providing this method.
+
 slash = "/"
+
 seq = ("01","16","2016") # this the sequence of strings
+
 print (slash.join( seq )) # joins the sequence of strings with slashes
+
 01/16/2016
+
 empty = ""
+
 seq = ("01","16","2016") # this the sequence of strings
+
 print (empty.join( seq )) # joins the sequence of strings with emptiness
+
 01162016
+
 # String len() Method
+
 # The method len() returns the length of the string.
+
 # len( str )
+
 string = "how many characters are in this sentence";
+
 print ("there are ", len(string), "characters in string")
+
 there are  40 characters in string
+
 # String ljust() Method
-# The method ljust() returns the string left justified in a string of length width. Padding is done using the specified fillchar (default is a space). The original string is returned if width is less than len(s).
+
+# The method ljust() returns the string left justified in a string of length width. Padding is done using the specified 
+fillchar (default is a space). The original string is returned if width is less than len(s).
+
 # str.ljust(width[, fillchar])
+
 # width -- This is string length in total after padding
+
 # fillchar -- This is filler character, default is a space.
+
 str = " To the left, the left, irreplacable"
+
 print (str.ljust(45,"+"))
+
  To the left, the left, irreplacable+++++++++
+
 upper = "THIS IS SO LOUD"
+
 print (upper.lower()) # make string all lowercase
+
 this is so loud
+
 # String lstrip() Method
-# The method lstrip() returns a copy of the string in which all chars have been stripped from the beginning of the string (default whitespace characters).
+
+# The method lstrip() returns a copy of the string in which all chars have been stripped from the beginning of the string 
+(default whitespace characters).
+
 str = "     so much cushion    " ;
-print (str.lstrip()) # remove cushion on left and right of text
-so much cushion    
+
+print (str.lstrip()) # remove cushion on left and right of text so much cushion    
+
 str_1 = "102021020numbers on left and right40121202"
-print (str.lstrip('15')) # 15 chars to be trimmed
+
+print (str.lstrip('15')) # 15 chars to be trimmed 
+
      so much cushion    
+
 print (str_1.lstrip('15')) # 15 chars to be trimmed
+
 02021020numbers on left and right40121202
+
 print (str_1.lstrip('40')) # 15 chars to be trimmed
+
 102021020numbers on left and right40121202
+
 print (str_1.lstrip('2')) # chars to be trimmed
+
 102021020numbers on left and right40121202
+
 # String maketrans() Method
+
 ###
-# The method maketrans() returns a translation table that maps each character in the intabstring into the character at the same position in the outtab string. Then this table is passed to the translate() function.
+
+# The method maketrans() returns a translation table that maps each character in the intabstring into the character at the 
+same position in the outtab string. Then this table is passed to the translate() function.
+
 # Both intab and outtab must have the same length.
+
 #
+
 # str.maketrans(intab, outtab]);
+
 # intab -- This is the string having actual characters
 # outtab -- This is the string having corresponding mapping character.
-from string import maketrans # Required to call maketrans function.
-Traceback (most recent call last):
-  File "<pyshell#66>", line 1, in <module>
-    from string import maketrans # Required to call maketrans function.
-ImportError: cannot import name 'maketrans'
-from string import maketrans
-Traceback (most recent call last):
-  File "<pyshell#67>", line 1, in <module>
-    from string import maketrans
-ImportError: cannot import name 'maketrans'
+
 # String max() Method
+
 # The method max() returns the max alphabetical character from the string str.
+
 # max(str)
+
 # str -- This is the string from which max alphabetical character needs to be returned.
+
 str = "what is the latest letter in alphabet in this phrase?"
+
 print ("Max character: " + max(str))
+
 Max character: w
+
 # String min() Method
+
 # The method min() returns the min alphabetical character from the string str.
+
 # min(str)
+
 str = "what is the earliest letter in alphabet in this phrase?"
+
 print ("Min character: " + min(str))
+
 Min character:  
+
 print (min(str))
- 
+
 str = "what is the earliest letter in alphabet in this phrase!";
+
 print ("Min character: " + min(str))
+
 Min character:  
+
 str = "this-is-real-string-example....wow!!!";
+
 print ("Min character: " + min(str))
+
 Min character: !
+
 # String replace() Method
-# The method replace() returns a copy of the string in which the occurrences of old have been replaced with new, optionally restricting the number of replacements to max.
+
+# The method replace() returns a copy of the string in which the occurrences of old have been replaced with new, optionally 
+restricting the number of replacements to max.
+
 # str.replace(old, new[, max])
+
 str = "this is real. The color is dark."
+
 print (str.replace("is", "is not")) # replace example
+
 this not is not real. The color is not dark.
+
 var = "this is real."
+
 print (var.replace("is", "is not"))
+
 this not is not real.
+
 print (var.replace("is", "isn't"))
+
 thisn't isn't real.
+
 tr = "tree is real'
+
 SyntaxError: EOL while scanning string literal
+
 tr = "tree is real"
+
+
 print (tr.replace("is", "isn't"))
+
 tree isn't real
+
 # String rfind() Method
-# The method rfind() returns the last index where the substring str is found, or -1 if no such index exists, optionally restricting the search to string[beg:end].
+
+# The method rfind() returns the last index where the substring str is found, or -1 if no such index exists, optionally 
+restricting the search to string[beg:end].
+
 # str.rfind(str, beg=0 end=len(string))
+
 tr = "tree is real"
+
 sr = "ea"
+
 print(tr.rfind(sr))
-9
+
 print(tr.rfind(sr, 5, 15))
+
 9
+
 # String rindex() Method
-# The method rindex() returns the last index where the substring str is found, or raises an exception if no such index exists, optionally restricting the search to string[beg:end].
+
+# The method rindex() returns the last index where the substring str is found, or raises an exception if no such index 
+exists, optionally restricting the search to string[beg:end].
+
 # str.rindex(str, beg=0 end=len(string))
+
 tr = "tree is real"
+
 sr = "ea"
+
 print (tr.rindex(sr))
+
 9
+
 # rjust() Method
-# The method rjust() returns the string right justified in a string of length width. Padding is done using the specified fillchar (default is a space). The original string is returned if width is less than len(s).
+
+# The method rjust() returns the string right justified in a string of length width. Padding is done using the specified 
+fillchar (default is a space). The original string is returned if width is less than len(s).
+
 # str.rjust(width[, fillchar])
+
 str = "moving to the right"
-print (str.rjust(40, "-+-"))
-Traceback (most recent call last):
-  File "<pyshell#114>", line 1, in <module>
-    print (str.rjust(40, "-+-"))
-TypeError: The fill character must be exactly one character long
+
 print (str.rjust(40, "-"))
+
 ---------------------moving to the right
 # String rstrip() Method
-# The method rstrip() returns a copy of the string in which all chars have been stripped from the end of the string (default whitespace characters).
+
+# The method rstrip() returns a copy of the string in which all chars have been stripped from the end of the string (default 
+whitespace characters).
+
 # str.rstrip([chars])
 str ="gonna trimming on fat......"
 print(str.rstrip())
 gonna trimming on fat......
+
 str ="gonna trimming on fat      "
 print(str.rstrip())
+
 gonna trimming on fat
+
 
 print(str.rstrip('10'))
+
 gonna trimming on fat      
+
 # String split() Method
-# The method split() returns a list of all the words in the string, using str as the separator (splits on all whitespace if left unspecified), optionally limiting the number of splits to num.
+
+# The method split() returns a list of all the words in the string, using str as the separator (splits on all whitespace if 
+left unspecified), optionally limiting the number of splits to num.
+
 # str.split(str="", num=string.count(str)).
+
 str = " first split \n second split \n third split"
+
 print(str.split( ))
+
 ['first', 'split', 'second', 'split', 'third', 'split']
-print(str.split(\n))
-SyntaxError: unexpected character after line continuation character
+
 print(str.split("\n", 1))
+
 [' first split ', ' second split \n third split']
+
 # String splitlines() Method
-# The method splitlines() returns a list with all the lines in string, optionally including the line breaks (if num is supplied and is true)
+
+# The method splitlines() returns a list with all the lines in string, optionally including the line breaks (if num is 
+supplied and is true)
+
 # str.splitlines( num=string.count('\n'))
+
 str = " first split \n second split \n third split"
+
 print(str.splitlines())
 [' first split ', ' second split ', ' third split']
+
 print(str.splitlines(2))
+
 [' first split \n', ' second split \n', ' third split']
+
 print(str.splitlines(1))
+
 [' first split \n', ' second split \n', ' third split']
+
 print(str.splitlines(3))
+
 [' first split \n', ' second split \n', ' third split']
+
 # String startswith() Method
-# The method startswith() checks whether string starts with str, optionally restricting the matching with the given indices start and end.
+
+# The method startswith() checks whether string starts with str, optionally restricting the matching with the given indices 
+start and end.
+
 # str.startswith(str, beg=0,end=len(string));
+
 str = " first split \n second split \n third split"
+
 print(str.startswith('first'))
+
 False
+
 print(str.startswith(' '))
+
 True
+
 # String strip() Method
-# The method strip() returns a copy of the string in which all chars have been stripped from the beginning and the end of the string (default whitespace characters).
+
+# The method strip() returns a copy of the string in which all chars have been stripped from the beginning and the end of the 
+string (default whitespace characters).
+
 # str.strip([chars]);
+
 str = "-----first split \n second split \n third split----"
+
 print(str.split('-'))
+
 ['', '', '', '', '', 'first split \n second split \n third split', '', '', '', '']
+
 print(str.split('-'))
+
 ['', '', '', '', '', 'first split \n second split \n third split', '', '', '', '']
+
 # String swapcase() Method
+
 # The method swapcase() returns a copy of the string in which all the case-based characters have had their case swapped.
+
 str ="gonna trimming on fat"
-print(str.swapcase())
-GONNA TRIMMING ON FAT
-var = "GONNA TRIMMING ON FAT"
+
 print(str.swapcase())
 
 GONNA TRIMMING ON FAT
+
+var = "GONNA TRIMMING ON FAT"
+
+print(str.swapcase())
+
+GONNA TRIMMING ON FAT
+
 print(var.swapcase())
+
 gonna trimming on fat
+
 # print(str.swapcase())
+
 # The method title() returns a copy of the string in which first characters of all the words are capitalized.
+
 str ="gonna trimming on fat"
+
 print(str.title())
+
 Gonna Trimming On Fat
+
 # String translate() Method
+
 # The method translate() returns a copy of the string in which all characters have been translated using table (constructed with the maketrans() function in the string module), optionally deleting all characters found in the string deletechars.
 
 #str.translate(table[, deletechars]);
 
-
 # String upper() Method
+
 # The method upper() returns a copy of the string in which all case-based characters have been uppercased.
+
  str ="gonna trimming on fat"
+
  
+
 SyntaxError: unexpected indent
+
 str ="gonna trimming on fat"
+
 print(str.upper())
+
 GONNA TRIMMING ON FAT
+
 # String zfill() Method
+
 # The method zfill() pads string on the left with zeros to fill width.
+
 str ="gonna trimming on fat"
+
 print(str.zfill(50))
+
 00000000000000000000000000000gonna trimming on fat
+
 # String isdecimal() Method
-# The method isdecimal() checks whether the string consists of only decimal characters. This method are present only on unicode objects.
-# Note: To define a string as Unicode, one simply prefixes a 'u' to the opening quotation mark of the assignment. Below is the example.
+
+# The method isdecimal() checks whether the string consists of only decimal characters. This method are present only on 
+unicode objects.
+
+# Note: To define a string as Unicode, one simply prefixes a 'u' to the opening quotation mark of the assignment. Below is 
+the example.
+
 str = u"turn3479";
+
 print(str.isdecimal());
+
 False
+
 var = u"17243479";
+
 print(var.isdecimal());
+
 True
+
+
