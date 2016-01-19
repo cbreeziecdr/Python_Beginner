@@ -984,3 +984,314 @@ print ("radians(286.4788975654116) : ",  math.radians(286.4788975654116))
 radians(286.4788975654116) :  5.0
 
 # radians() converts angle x from degrees to radians
+
+# String variables
+
+t_1 = "Olah"
+
+t_1
+
+'Olah'
+
+# can "update" an existing string by reassigning variable
+
+t_2 = t_1[:4] + "Amigo"
+
+t_2
+
+'OlahAmigo'
+
+t_3 = t_1[:5] + "Amigo"
+
+t_3
+
+'OlahAmigo'
+
+t_4 = t_1[:5] + " Amigo"
+
+t_4
+
+print ("\a")
+
+print("\b")
+ 
+print("\cx")
+
+\cx
+
+print("C-x")
+
+C-x
+
+print("\e")
+
+\e
+
+print("\f")
+ 
+print ("\a") # bell or alert
+
+print("\b") # backspace
+ 
+print("\cx") # Control-x
+
+\cx
+
+print("C-x") # Control-x
+
+C-x
+
+print("\e") # Escape
+
+\e
+
+print("\f") # Formfeed
+ 
+print("M-\C-x") # Meta-Control-x
+
+M-\C-x
+
+print("\n") # Newline
+
+print("\nnn") # Octal notation, where n is in the range 0.7
+
+nn
+
+print ("\r") # Carriage return
+
+print ("\s") # Space
+
+\s
+
+print ("\t") # Tab
+	
+print ("\v") # Vertical tab
+
+
+# String Special Operators
+
+a = "Tell"
+
+b = "Sam"
+
+d, e = "Bye", "Ted"
+
+a
+
+'Tell'
+
+b
+
+'Sam'
+
+d
+
+'Bye'
+
+e
+
+'Ted'
+
+f = a + b
+
+f
+
+'TellSam'
+
+f = a + b # Concatenation - Adds values on either side of the operator
+
+0f
+
+'TellSam'
+
+a * 3 # Repetition
+
+'TellTellTell'
+
+a[1:] # Slice - Gives the character from the given index
+
+'ell'
+
+a[1] # Slice - Gives the character from the given index
+
+'e'
+
+a[2:4] # Range Slice - Gives the characters from the given range
+
+'ll'
+
+"l" in a # membership
+
+True
+
+"b" not in "Tell" # Membership - Returns true if a character does not exist in the given string
+
+True
+
+print (r"Bye") # Raw String - Suppresses actual meaning of Escape characters.
+
+Bye
+
+print("\n") # Newline
+
+print("\n hi ") # Newline
+
+ hi 
+
+print(r"\n hi ") # Newline
+
+\n hi 
+
+# String formatting operator
+
+"%" # 	Format - Performs String formatting
+
+'%'
+
+print ("My name is %s and weight is %d kg!" % ('Zara', 21))
+
+My name is Zara and weight is 21 kg!
+
+
+int(25)
+
+25
+
+# %c  	character
+
+# %s string conversion via str() prior to formatting
+
+# %i signed decimal integer
+
+# %d  	signed decimal integer
+
+# %u unsigned decimal integer
+
+# %o octal integer
+
+# %x hexadecimal integer (lowercase letters)
+
+# %X hexadecimal integer (UPPERcase letters)
+
+# %e  	exponential notation (with lowercase 'e')
+
+# %E  	exponential notation (with UPPERcase 'E')
+
+# %f  	floating point real number
+
+# %g  	the shorter of %f and %e
+
+# %G  	the shorter of %f and %E
+
+# * 	argument specifies width or precision
+
+# - 	left justification
+
+# + display the sign
+
+# <sp> leave a blank space before a positive number
+
+# # 	add the octal leading zero ( '0' ) or hexadecimal leading \ '0x' or '0X', depending on whether 'x' or 'X' were used.
+
+# 0 pad from left with zeros (instead of spaces)
+
+# % 	'%%' leaves you with a single literal '%'
+
+# (var) mapping variable (dictionary arguments)
+
+# m.n. 	m is the minimum total width and n is the number \ of digits to display after the decimal point (if appl.)
+
+# Triple Quotes - allowing strings to span multiple lines, \including verbatim NEWLINEs, TABs, and any other special characters
+
+# example ]
+
+story = '''The writing on the wall was really lengthy. There will be more I can add to the story here. The castle lefted the stature of the kindom to newer heights'''
+
+story
+
+'The writing on the wall was really lengthy. There will be more I can add to the story here. The castle lefted the stature of the kindom to newer heights'
+
+"example of having tabs \t in text like here, a new line \n like this"
+
+'example of having tabs \t in text like here, a new line \n like this'
+
+ab = "example of having tabs \t in text like here, a new line \n like this"
+
+ab
+
+'example of having tabs \t in text like here, a new line \n like this'
+
+print("example of having tabs \t in text like here, a new line \n like")
+
+example of having tabs 	 in text like here, a new line 
+
+ like
+
+print ('C:\\nowhere')
+
+C:\nowhere
+
+print (r'C:\\nowhere')
+
+C:\\nowhere
+
+# Raw strings do not treat the backslash as a special character at all.
+
+# Every character you put into a raw string stays the way you wrote i
+
+#
+
+#
+
+# Unicode String
+
+# Normal strings are store in 8-bit ASCII
+
+# Unicode strings are store in 16-bit Unicode
+
+# Unicode allows a more varied set of characters
+
+# Unicode allows inclusion of special characters from most world languages
+
+print (u'Hello, world!')
+
+Hello, world!
+
+print (r'Hello, world!')
+
+Hello, world!
+
+print(u'Ça va bien')
+
+Ça va bien
+
+print(u'Bibliothèque au Paris') # Unicode examples
+
+Bibliothèque au Paris
+
+print('Bibliothèque au Paris')
+
+Bibliothèque au Paris
+
+#
+
+#
+
+# Built-in String Methods
+
+# Python includes the following built-in methods to manipulate strings
+
+str.capitalize('thomas') # capitalizes first letter of string
+
+'Thomas'
+
+var = "texas"
+
+var.center(8, 'b') # centers string variable
+
+'btexasbb'
+
+var.center(8, ' ') # centers string variable with fill char being a space
+
+' texas  '
+
