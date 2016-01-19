@@ -838,9 +838,9 @@ choice(['MA', 'BA', 'TX', 'MT', 'CA']) :  CA
 
  import random
 
- # Select an even number in 20 <= number < 352
+# Select an even number in 20 <= number < 352
 
- # Select an even number in 20 <= number < 352
+# Select an even number in 20 <= number < 352
 
 print ("randrange(20, 352, 2) : ", random.randrange(20, 352, 2))
 
@@ -854,15 +854,133 @@ randrange(20, 352, 2) :  40
 
  import random
 
- # 1st random number
+# 1st random number
 
 print ("random() : ", random.random() )
 
 random() :  0.8079796235628943
 
- # random number
+# random number
 
 print ("random() : ", random.random() )
 
 random() :  0.017438165530229366
 
+
+ import random
+
+ random.random()
+
+0.6523036668102292
+
+ random.random()
+
+0.03360773551597296
+
+# print out same random number repeatly
+
+ import random
+
+ random.seed(10)
+
+ print ("Random number with seed 10:", random.random())
+
+Random number with seed 10: 0.5714025946899135
+
+ print ("Random number with seed 10:", random.random())
+
+Random number with seed 10: 0.4288890546751146
+
+ random.seed(10)
+
+ print ("Random number with seed 10:", random.random())
+
+Random number with seed 10: 0.5714025946899135
+
+ random.seed(10)
+
+ print ("Random number with seed 10:", random.random())
+
+Random number with seed 10: 0.5714025946899135
+
+# to get same random number, need to put random.seed(#) statement
+
+# right before the random.random() statement
+
+# begin all these statements first with a improt random statement
+
+ import random
+
+ a_list = [15, 17, 5, 9] # list variable
+
+ random.shuffle(a_list) # randomize items in list in place
+
+ print ("reshuffled list:", a_list)
+
+reshuffled list: [5, 15, 17, 9]
+
+ import random
+
+ print("random float number between parameters x, y :", random.uniform(5,10))
+
+random float number between parameters x, y : 6.030491160697508
+
+# trigonometric functions
+
+asin(0.45) :  0.4667653390472964
+
+import math
+
+print ("atan(0) : ",  math.atan(0)) # returns arc tangent of x, in radians
+
+atan(0) :  0.0
+
+import math
+
+print ("atan2(-0.1,-0.1) : ",  math.atan2(-0.1,-0.1))
+
+atan2(-0.1,-0.1) :  -2.356194490192345
+
+# above returns atan(y / x), in radians
+
+import math
+
+print ("cos(-3) : ",  math.cos(-3)) # returns the cosine of x radians
+
+cos(-3) :  -0.9899924966004454
+
+import math
+
+print ("hypot(1, 4) : ",  math.hypot(1, 4))
+
+hypot(1, 4) :  4.123105625617661
+
+# return the Euclidean norm, sqrt(x*x + y*y)
+
+import math
+
+print ("sin(5) : ",  math.sin(5)) # returns the sine of x, in radians
+
+sin(5) :  -0.9589242746631385
+
+import math
+
+print ("tan(4) : ",  math.tan(4)) # returns the tangent of x radians
+
+tan(4) :  1.1578212823495775
+
+import math
+
+print ("degrees(5) : ",  math.degrees(5))
+
+degrees(5) :  286.4788975654116
+
+# converts angle x from radians to degrees
+
+import math
+
+print ("radians(286.4788975654116) : ",  math.radians(286.4788975654116))
+
+radians(286.4788975654116) :  5.0
+
+# radians() converts angle x from degrees to radians
