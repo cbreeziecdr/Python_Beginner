@@ -803,3 +803,66 @@ Current letter is : r
 
 (0.34299999999999997, 12.0)
 
+
+ import math
+
+ math.pow(2,3)
+
+8.0
+
+ import math
+  
+print ("round(80.23456, 2) : ", round(80.23456, 2))
+
+round(80.23456, 2) :  80.23
+
+ round(12.239120,2)
+
+12.24
+
+ import math
+
+ math.sqrt(64)
+
+8.0
+
+import random
+
+ print ("choice(['MA, BA, TX, MT, CA']) : ", random.choice(['MA, BA, TX, MT, CA']))
+
+choice(['MA, BA, TX, MT, CA']) :  MA, BA, TX, MT, CA
+
+ print ("choice(['MA', 'BA', 'TX', 'MT', 'CA']) : ", random.choice(['MA', 'BA', 'TX', 'MT', 'CA']))
+
+choice(['MA', 'BA', 'TX', 'MT', 'CA']) :  CA
+
+ import random
+
+ # Select an even number in 20 <= number < 352
+
+ # Select an even number in 20 <= number < 352
+
+print ("randrange(20, 352, 2) : ", random.randrange(20, 352, 2))
+
+randrange(20, 352, 2) :  208
+
+ # Select an even number in 20 <= number < 352
+
+print ("randrange(20, 352, 2) : ", random.randrange(20, 352, 2))
+
+randrange(20, 352, 2) :  40
+
+ import random
+
+ # 1st random number
+
+print ("random() : ", random.random() )
+
+random() :  0.8079796235628943
+
+ # random number
+
+print ("random() : ", random.random() )
+
+random() :  0.017438165530229366
+
