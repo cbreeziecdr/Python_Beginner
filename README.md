@@ -738,3 +738,68 @@ Current letter is : e
 
 Current letter is : r
 
+ x = -2.5464
+
+ y = abs(x)
+
+ y
+
+2.5464
+
+ y = abs(x) # absolute value
+ 
+ math.ceil(x) # the ceiling of x
+
+-2
+
+ a = 2
+
+ b = 3
+
+ c = 4
+
+ e = 2
+
+ x = 1
+ y = 2
+
+ import math
+
+ math.exp( x )
+
+2.718281828459045
+
+ import math
+
+ z = 1.5
+
+ math.floor( z )
+
+1
+ 
+ math.log(1.5)
+
+0.4054651081081644
+
+ import math
+
+ math.log10(1.5)
+
+0.17609125905568124
+
+ import math
+
+ max(2, 3, 5)
+
+5
+
+ min(10, 43, 34, 7)
+
+7
+
+ import math
+
+ math.modf(12.343)
+
+(0.34299999999999997, 12.0)
+
