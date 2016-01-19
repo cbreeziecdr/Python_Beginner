@@ -1295,3 +1295,213 @@ var.center(8, ' ') # centers string variable with fill char being a space
 
 ' texas  '
 
+# method count()
+
+# returns the number of occurrences of substring sub in the range [start
+
+# , end]. Optional arguments start and end are interpreted
+
+# as in slice notation.
+
+# str.count(sub, start= 0,end=len(string))
+
+# in above str is the variable in which string is stored
+
+str = "This is Mississippi isn't it";
+
+sub = "s" # going to get count of existence of letter 's' in string
+
+print ("str.count(sub, 1,20) : ", str.count(sub, 1,20))
+
+str.count(sub, 1,20) :  6
+
+# above output says there was 6 instances of letter 's' in string str
+
+# method decode() decodes the string using the codec registered
+
+# for encoding. It defaults to the default string encoding.
+
+# Str.decode(encoding='UTF-8',errors='strict')
+
+# str is variable in which string is stored
+
+str = "Good morning Miami!"
+
+# endswith() Method
+
+# It returns True if the string ends with the specified suffix, otherwise return False optionally restricting the matching with the given indices start and end.
+
+# str.endswith(suffix[, start[, end]])
+
+# TRUE if the string ends with the specified suffix, otherwise FALSE.
+
+str = "What will the end be?";
+
+suffix = "be?";
+
+print (str.endswith(suffix)) # checks if string ends with suffix given
+
+True
+
+suffix_1 = "start"
+
+print (str.endswith(suffix_1)) # checks if string ends with suffix given
+
+False
+
+print (str.endswith(suffix, 5, 30)) # if string range ends with suffix
+
+True
+
+# String expandtabs() Method
+
+# str.expandtabs(tabsize=8)
+
+# It returns a copy of the string in which tab characters ie. '\t' are expanded using spaces, optionally using the given tabsize (default 8)..
+
+###
+
+str = "this is\tstring example....wow!!!";
+
+print ("string before:" + str)
+
+string before:this is	string example....wow!!!
+
+print ("string after:" + str.expandtabs())
+
+string after:this is string example....wow!!!
+
+print ("string after double expanded tab:" + str.expandtabs(16))
+
+string after double expanded tab:this is         string example....wow!!!
+
+#####
+
+#####
+
+# String find() Method
+
+# It determines if string str occurs in string, or in a substring of string if starting index beg and ending index end are 
+given.
+
+# str.find(str, beg=0 end=len(string))
+
+# str -- This specifies the string to be searched
+
+# beg -- This is the starting index, by default its 0.
+
+# end -- This is the ending index, by default its equal to the lenght of the string.
+
+str1 = "move to the left and the right" # full string
+
+str2 = "left" # substring to find
+
+print (str1.find(str2))
+
+12
+
+# Return value of String find() method is Index if found and -1 otherwise.
+
+print(str1.find(str2,25, 40)) # range find example
+
+-1
+
+# above return of -1 means substring was not found in string w/in range
+
+#
+
+# String index() Method
+
+#####
+
+# It determines if string str occurs in string or in a substring of string if starting index beg and ending index end are 
+given. This method is same as find(), but raises an exception if sub is not found.
+
+#
+
+# str.index(str, beg=0 end=len(string))
+
+str1 = "move to the left and the right" # full string
+
+str2 = "left" # substring to find
+
+print (str1.index(str2)) # the position of substring in full string
+
+12
+
+print (str1.index(str2, 3, 20)) # the position of substring in full string
+
+12
+
+#####
+
+#####
+
+#####
+
+# String isalnum() Method
+
+# The method isalnum() checks whether the string consists of alphanumeric characters.
+
+# str.isa1num()
+
+# This method returns true if all characters in the string are alphanumeric and there is at least one character, false 
+otherwise.
+
+str = "win2016";  # No space in this string
+
+print (str.isalnum()) # example
+
+True
+
+str = "win 2016";
+
+print (str.isalnum()) # example
+
+False
+
+# String isalpha() Method
+
+str = "hello";  # No space & digit in this string
+
+print (str.isalpha())
+
+True
+
+#String isdigit() Method
+
+# The method isdigit() checks whether the string consists of digits only.
+
+str = "1738";  # Only digit in this string
+
+print (str.isdigit())
+
+True
+
+# String islower() Method
+
+# The method islower() checks whether all the case-based characters (letters) of the string are lowercase.
+
+str = "THIS is string example....wow!!!";
+
+print (str.islower())
+
+False
+
+# String isnumeric() Method
+
+# The method isnumeric() checks whether the string consists of only numeric characters. This method is present only on 
+unicode objects.
+
+# To define a string as Unicode, one simply prefixes a 'u' to the opening quotation mark of the assignment. Below is the 
+example
+
+str = u"this2009";
+
+print (str.isnumeric())
+
+False
+
+# String isspace() Method
+
+# The method isspace() checks whether the string consists of whitespace.
