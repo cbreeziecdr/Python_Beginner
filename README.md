@@ -2383,5 +2383,1300 @@ tuple(c_list) # converting list variable into a tuple
 
 (12, 134, 64, 43, 27)
 
+# Lists
+
+var = ['a', 'b', 'c', 'd'];
+
+print ("var[2:3]: ", var[2:3]) # print items 2 and 3 in list
+
+var[2:3]:  ['c']
+
+# update list items
+
+list[2] = 'f'
+
+Traceback (most recent call last):
+
+  File "<pyshell#5>", line 1, in <module>
+
+    list[2] = 'f'
+
+TypeError: 'type' object does not support item assignment
+
+var[2] = 'cat' # make item 2 in list now be 'cat' instead
+
+print ("new item 2 in list called var:", var[2])
+
+new item 2 in list called var: cat
+
+# removing list iem
+
+ # removing list item
+ 
+del var[1];
+
+print ("new version of list var;", var[1])
+
+new version of list var; cat
+
+# basic list operations
+
+# concatenation with '+' and repetition with '*'
+
+len(['a', 'b', 'c', 'd']) # length
+
+4
+
+# above 'len' function provides the quantity of items in a list
+
+list1 = ['be', 'see', 'den']
+
+b = var + list1
+
+print ("combination of lists var and list1:", b)
+
+combination of lists var and list1: ['a', 'cat', 'd', 'be', 'see', 'den']
+
+print("list var 3 times:", var * 3)
+
+list var 3 times: ['a', 'cat', 'd', 'a', 'cat', 'd', 'a', 'cat', 'd']
+
+# checking if a value is in a list with membership expression
+
+'a' in var
+
+True
+
+'b' in var # is value of 'b' in the list called var
+
+False
+
+# list iteration
+
+for x in var: print (x)
+
+a
+
+cat
+
+d
+
+# above assign x variable to value of '3'
+
+# next statement above instructs for loop to print 'x' first values of var
+
+###
+
+###
+
+# Indexing, Slicing, and Matrixes
+
+#
+
+T = ['bread', 'cheese', 'jam']
+
+T[2] # offsets start at zero
+
+'jam'
+
+T[-0] # negative: count from the right
+
+'bread'
+
+T[-2] # negative: count from the right
+
+'cheese'
+
+T[1] # offsets start at zero
+
+'cheese'
+
+T[-1] # negative: count from the right
+
+'jam'
+
+T[1:] # slicing fetches sections, in this case items from item number one
+
+['cheese', 'jam']
+
+# Built-in List Functions and Methods
+
+###
+
+# List cmp() Method: compares elements of two lists.
+
+be, me = ['best', 'ever'], ['ever', 'greatest']
+
+len(['a', 'b', 'c', 'd']) # length
+
+4
+
+max(['a', 'b', 'c', 'd']) # max
+
+'d'
+
+min(['a', 'b', 'c', 'd']) # min
+
+'a'
+
+# List list() Method
+
+# The method list() takes sequence types and converts them to lists. This is used to convert a given tuple 
+into list.
+
+# Tuple are very similar to lists with only difference that element values of a tuple can not be changed 
+and tuple elements are put between parentheses instead of square bracket.
+
+l_tuple = ('apple', 'berry', 'cherry')
+
+l_list = list(l_tuple)
+
+print ("list elements:", l_list)
+
+list elements: ['apple', 'berry', 'cherry']
+
+# several list methods available
+
+####
+
+# List append() Method
+
+new = ['store', 'sale', 'clearance']
+
+new.append('garage') # 'garage' as value in the list called new
+
+print ("list after append:", new)
+
+list after append: ['store', 'sale', 'clearance', 'garage']
+
+# List count() Method
+
+# method count() returns count of how many times obj occurs in list.
+
+new = ['store', 'sale', 'clearance']
+
+print (" value of sale appears", new.count('sale'), " times")
+
+ value of sale appears 1  times
+
+print (" value of store appears", new.count('store'), " time(s)")
+
+ value of store appears 1  time(s)
+
+## List extend() Method
+
+#####
+
+# method extend() appends the contents of seq to list.
+
+####
+
+done = ['finale', 'home stretch', 'complete']
+
+conclude = ['summary', 'cool down']
+
+done.extend(conclude) # add the items of list conclude to list done
+
+print ("Extended list called done:", done)
+
+Extended list called done: ['finale', 'home stretch', 'complete', 'summary', 'cool down']
+
+# List index() Method
+
+# method index() returns the lowest index in list that obj appears.
+
+vcr = ['tape', 'film', 'movie']
+
+print ("Index position of 'movie';", vcr.index('movie'))
+
+Index position of 'movie'; 2
+
+# List insert() Method
+
+# method insert() inserts object obj into list at offset index.
+
+awal = ['left', 'bailed', 'discharged']
+
+awal.insert(1, 'retired')
+
+print ("approved list:", awal)
+
+approved list: ['left', 'retired', 'bailed', 'discharged']
+
+# List pop() Method
+
+# method pop() removes and returns last object or obj from the list.
+
+# list.pop(obj=list[-1])
+
+# obj -- This is an optional parameter, index of the object to be removed from the list.
+
+lremove = ['after', 'year', 'done', 'now']
+
+print ("Remove list dropper:", lremove.pop())
+
+Remove list dropper: now
+
+print ("Remove list dropper:", lremove.pop(1)) # item one remove
+
+Remove list dropper: year
+
+# List remove() Method
+
+# obj -- This is the object to be removed from the list.
+
+# This method does not return any value but removes the given object from the list.
+
+nlist = ['left', 'right', 'up', 'down']
+
+nlist.remove('right');
+
+print("nlist list after removal:", nlist)
+
+nlist list after removal: ['left', 'up', 'down']
+
+# List reverse() Method
+
+#  method reverse() reverses objects of list in place.
+
+# This method does not return any value but reverse the given object from the list
+
+nlist = ['left', 'right', 'up', 'down']
+
+nlist.reverse();
+
+print("nlist list reversed:", nlist)
+
+nlist list reversed: ['down', 'up', 'right', 'left']
+
+# List sort() Method
+
+# method sort() sorts objects of list, use compare func if given.
+
+# list.sort([func])
+
+# This method does not return any value but reverse the given object from the list.
+
+nlist = ['left', 'right', 'up', 'down']
+
+nlist.sort()
+
+print ("sorted list: ", nlist)
+
+sorted list:  ['down', 'left', 'right', 'up']
+
+####
+
+## Python Tuples
+
+####
+
+## Tuples are sequences, just like lists. The differences between tuples and lists are, the tuples cannot be changed 
+
+unlike lists and tuples use parentheses, whereas lists use square brackets.
+
+tuple_emtpy = (); # empty tuple
+
+tuple_single_val = (15,); # tuple with a single value
+
+tuple_emtpy
+
+()
+
+tuple_single_val
+
+(15,)
+
+tuple_full = (10, 14, 213, 2134)
+
+tuple_full
+
+(10, 14, 213, 2134)
+
+# tuple items cannot be updated or changed
+
+# tuples can be concatenated
+
+tuple_sing_full = tuple_single_val + tuple_full
+
+print(tuple_sing_full)
+
+(15, 10, 14, 213, 2134)
+
+# cannot remove item from tuple
+
+tuple_full = (10, 14, 213, 2134)
+
+del tuple_full # deleting a tuple
+
+print(tuple_full)
+
+Traceback (most recent call last):
+
+  File "<pyshell#131>", line 1, in <module>
+
+    print(tuple_full)
+
+NameError: name 'tuple_full' is not defined
+
+# above error message confirms tuple named tuple_full had been deleted
+
+###
+
+len(tuple_single_val)
+
+1
+
+ntuple = ('left', 'right', 'up', 'down')
+
+tuple_full = (10, 14, 213, 2134)
+
+combo = ntuple + tuple_full # concatenation
+
+print(combo)
+
+('left', 'right', 'up', 'down', 10, 14, 213, 2134)
+
+tuple_full*2 # repetition
+
+(10, 14, 213, 2134, 10, 14, 213, 2134)
+
+14 in tuple_full # membership
+
+True
+
+x = 4
+
+for x in combo: print (x) # print the first x items in tuple called combo
+
+left
+
+right
+
+up
+
+down
+
+10
+
+14
+
+213
+
+2134
+
+# Indexing, Slicing, and Matrixes
+
+##
+
+##
+
+tuple_full = (10, 14, 213, 2134)
+
+tuple_full[2] # Offsets start at zero
+
+213
+
+tuple_full[-2] # Negative: count from the right starting with '-1'
+
+213
+
+tuple_full[1:3] # Slicing fetches sections
+
+(14, 213)
+
+####
+
+# Slicing fetches sections
+
+####
+
+# Any set of multiple objects, comma-separated, written without identifying symbols, i.e., brackets for lists, 
+
+parentheses for tuples, etc., default to tuples, as indicated in these short examples −
+
+tuple_full = (10, 14, 213, 2134)
+
+len( tuple_full) # length
+
+4
+
+max( tuple_full) # max
+
+2134
+
+min( tuple_full) # min
+
+10
+
+c_list = [ 12, 134, 64, 43, 27] # list variable
+
+tuple(c_list) # converting list variable into a tuple
+
+(12, 134, 64, 43, 27)
+
+
+# Python Dictionary
+
+a_dict = {'color' : 'brown', 'mouth' : 'teeth'}
+
+print (a_dict) #printing a_dict
+
+{'mouth': 'teeth', 'color': 'brown'}
+
+# updating dictionary
+
+a_dict = {'color' : 'brown', 'mouth' : 'teeth'}
+
+a_dict['color'] = 'black' # new value for key
+
+a_dict['shape'] = 'round' # adding new entry
+
+print("a_dict items:", a_dict)
+
+a_dict items: {'mouth': 'teeth', 'color': 'black', 'shape': 'round'}
+
+del a_dict['color'] # remove entry with key 'color'
+
+print("new a_dict:", a_dict)
+
+new a_dict: {'mouth': 'teeth', 'shape': 'round'}
+
+a_dict.clear() # remove all entries in dict
+
+print("new a_dict:", a_dict)
+
+new a_dict: {}
+
+del a_dict # delete the entire dictionary
+
+# properties
+
+b_dict = {'color' : 'black', 'mouth' : 'ears'}
+
+print("b_dict['color'] : ", b_dict['color'])
+
+b_dict['color'] :  black
+
+# keys in dictionary must be immutable such as strings, numbers or tuples
+
+###
+
+b_dict = {'color' : 'black', 'mouth' : 'ears'}
+
+len(b_dict) # length
+
+2
+
+print("values : %s" % str (b_dict))
+
+values : {'mouth': 'ears', 'color': 'black'}
+
+# type() method
+
+b_dict = {'color' : 'black', 'mouth' : 'ears'}
+
+print ("variable type : %s" % type (b_dict))
+
+variable type : <class 'dict'>
+
+# methods with description
+
+#
+
+# dictionary clear() Method
+
+b_dict = {'color' : 'black', 'mouth' : 'ears'}
+
+print ("Start Len : %d" %  len(b_dict))
+
+Start Len : 2
+
+b_dict.clear
+
+<built-in method clear of dict object at 0x02A4C418>
+
+b_dict.clear()
+
+print ("Start Len : %d" %  len(b_dict))
+
+Start Len : 0
+
+c_dict = b_dict.copy()
+
+print("c_dict : ", c_dict)
+
+c_dict :  {}
+
+print("b_dict : ", b_dict)
+
+b_dict :  {}
+
+d_dict = {'color' : 'black', 'mouth' : 'ears'}
+
+e_dict = d_dict.copy()
+
+print("e_dict : ", e_dict)
+
+e_dict :  {'color': 'black', 'mouth': 'ears'}
+
+print ("New Dictinary : %s" %  str(e_dict))
+
+New Dictinary : {'color': 'black', 'mouth': 'ears'}
+
+# fromkeys() Method
+
+# dict.fromkeys(seq[, value]))
+
+seq = [1, 2, 3]
+
+d_dict.fromkeys(seq, '10')
+
+{1: '10', 2: '10', 3: '10'}
+
+f_dict = d_dict.fromkeys(seq, '10')
+
+print ("New Dictionary : %s" %  str(f_dict))
+
+New Dictionary : {1: '10', 2: '10', 3: '10'}
+
+# dictionary get() Method
+
+##
+
+# method get() returns a value for the given key. If key is not available then returns default value None.
+
+# dict.get(key, default=None)
+
+
+d_dict = {'color' : 'black', 'mouth' : 'ears'}
+
+print ("Value : %s" %  d_dict.get('mouth'))
+
+Value : ears
+
+print ("Value : %s" %  d_dict.get('Paid', "Often"))
+
+Value : Often
+
+# has_key() Method
+
+# method has_key() returns true if a given key is available in the dictionary, otherwise it returns a false.
+
+g_dict = {'color' : 'green', 'mouth' : 'toe'}
+
+dict = {'Name': 'Zara', 'Age': 7}
+
+###
+
+# dictionary items() Method
+
+# method items() returns a list of dict's (key, value) tuple pairs
+
+cd_dict = {'Name': 'Tim', 'Age': 20}
+
+print("Values : %s" % dict.items())
+
+Values : dict_items([('Age', 7), ('Name', 'Zara')])
+
+ye_dict = {'Name': 'Tom', 'Age': 16}
+
+print("Items : %s" % ye_dict.items())
+
+Items : dict_items([('Age', 16), ('Name', 'Tom')])
+
+print("Keys : %s" % ye_dict.keys())
+
+Keys : dict_keys(['Age', 'Name'])
+
+# keys in dictionary
+
+g_dict = {'color' : 'green', 'mouth' : 'toe'}
+
+print("Keys : %s" % g_dict.keys())
+
+Keys : dict_keys(['mouth', 'color'])
+
+print ("Value : %s " % g_dict.setdefault('mouth', False))
+
+Value : toe 
+
+abc = {'igloo' : 'snow', 'beach' : 'sand'}
+
+g_dict.update(abc) # adding 'abc' dictionary to g_dict dictionary
+
+print ("Updated dictionary: ", g_dict)
+
+Updated dictionary:  {'igloo': 'snow', 'beach': 'sand', 'mouth': 'toe', 'color': 'green'}
+
+print("Values of g_dict: ", g_dict.values())
+
+Values of g_dict:  dict_values(['snow', 'sand', 'toe', 'green'])
+
+# Python Date & Time
+
+# tick is the unit of time which is a floating point number in units of
+
+# seconds
+
+###
+
+# function time.time() returns the current system time in ticks since 12:00am, January 1, 1970(epoch).
+
+import time # required to include time module
+
+ticks = time.time()
+
+print("ticks count since 12:00am, Jan 1, 1970:", ticks)
+
+ticks count since 12:00am, Jan 1, 1970: 1453511758.10451
+
+# dates before epoch, 12:00am Jan 1, 1970 can't be represented as ticks
+
+# the cutoff in the future for tick format
+
+# is year 2038 for UNIX and Windows computer systems
+
+#
+
+# Much of Pythons time functions handle time as tuple of9 numbers
+
+# 4 digit year ex. 2008
+
+# Month of 1 to 12
+
+# DAy of 1 to 31
+
+# Hour of 0 to 23
+
+# Minute of 0 to 59
+
+# Second of 0 to 61 (60 or 61 are leap-seconds)
+
+# day of week 0 to 6 (0 is Monday)
+
+# day of year of 1 of 366 (julian day)
+
+# daylight savings -1, 0, 1, -1 means library determines DST
+
+ticks = time.time()
+
+ticks = time.time()
+
+print("ticks count since 12:00am, Jan 1, 1970:", ticks)
+
+ticks count since 12:00am, Jan 1, 1970: 1453512282.9735308
+
+# above tuple equivalent to struct_time structure
+
+# tm_year 2008
+
+# tm_mon 1 to 12
+
+# tm_mday 1 to 31
+
+# tm_hour 0 to 23
+
+# tm_min 0 to 59
+
+# tm_sec 0 to 61 (60 or 61 are leap-seconds)
+
+# tm_wday 0 to 6 (0 is Monday)
+
+# tm_yday 1 to 366 (julian day)
+
+# tm_isdst -1, 0, 1, -1 means library determines DST
+
+import time
+
+localtime = time.localtime(time.time())
+
+print ("local current :", localtime)
+
+local current : time.struct_time(tm_year=2016, tm_mon=1, tm_mday=22, tm_hour=19, tm_min=33, 
+
+tm_sec=34, tm_wday=4, tm_yday=22, tm_isdst=0)
+
+curr_time = time.localtime(time.time())
+
+print ("current time : ", curr_time)
+
+current time :  time.struct_time(tm_year=2016, tm_mon=1, tm_mday=22, tm_hour=19, tm_min=36, 
+tm_sec=24, tm_wday=4, tm_yday=22, tm_isdst=0)
+
+# can format any time as per your requirement, but simple method to get time in readable format is 
+asctime()
+
+import time;
+
+localtime = time.asctime(time.localtime(time.time()))
+
+print("local current time: " , localtime)
+
+local current time:  Fri Jan 22 19:57:23 2016
+
+nextime = time.asctime(time.localtime(time.time()))
+
+print("next time:", nextime)
+
+next time: Fri Jan 22 19:59:18 2016
+
+# get calendar
+
+import calendar
+
+gmonth = calendar.month(2015, 12)
+
+print("This is the calendar month:")
+
+This is the calendar month:
+
+print (gmonth)
+
+   December 2015
+
+Mo Tu We Th Fr Sa Su
+
+    1  2  3  4  5  6
+
+ 7  8  9 10 11 12 13
+
+14 15 16 17 18 19 20
+
+21 22 23 24 25 26 27
+
+28 29 30 31
+
+import calendar
+
+jan_month = calendar.month(2016,1)
+
+print("Jan 2016 calendar:")
+
+Jan 2016 calendar:
+
+print(jan_month)
+
+    January 2016
+
+Mo Tu We Th Fr Sa Su
+
+             1  2  3
+
+ 4  5  6  7  8  9 10
+
+11 12 13 14 15 16 17
+
+18 19 20 21 22 23 24
+
+25 26 27 28 29 30 31
+
+
+
+# methods for time module
+
+#
+
+# time altzone() Method
+
+# returns the offset of the local DST timezone, in seconds west of UTC, if one is defined. This is negative 
+
+if the local DST timezone is east of UTC (as in Western Europe, including the UK). Only use this if daylight 
+
+is nonzero.
+
+import time
+
+print("time.altzone %d " % time.altzone)
+
+time.altzone 18000 
+
+print("seconds west of UTC time %d " % time.altzone)
+
+seconds west of UTC time 18000 
+
+# time asctime() Method
+
+import time
+
+asctime_ex = time.asctime(time.localtime(time.time()))
+
+print("this an example of asctime:", asctime_ex)
+
+this an example of asctime: Fri Jan 22 20:11:23 2016
+
+# another approach to getting asctime
+
+import time
+
+a = time.localtime()
+
+print(a) # local time in standard format
+
+time.struct_time(tm_year=2016, tm_mon=1, tm_mday=22, tm_hour=20, tm_min=12, tm_sec=51, 
+tm_wday=4, tm_yday=22, tm_isdst=0)
+
+print("local time in asctime format: %s" % time.asctime(a))
+
+local time in asctime format: Fri Jan 22 20:12:51 2016
+
+# time clock() Method
+
+# method clock() returns the current processor time as a floating point number expressed in seconds on 
+Unix.
+
+# On Windows, this function returns wall-clock seconds elapsed since the first call to this function, as a 
+floating point number, based on the Win32 function QueryPerformanceCounter.
+
+import time
+
+def procedure():
+
+	time.sleep(2.5)
+
+# measure process time
+
+t0 = time.clock()
+
+procedure()
+
+print (time.clock() - t0, "seconds process time")
+
+39.43636092396363 seconds process time
+
+import time
+
+def procedure():
+
+	time.sleep(5)
+
+t1 = time.clock()
+
+procedure()
+
+print(time.clock() - t1, "seconds process time")
+
+35.26896844666699 seconds process time
+
+# measure wall time
+
+t2 = time.time()
+
+procedure()
+
+print (time.time() - t2, "seconds wall time")
+
+37.642865896224976 seconds wall time
+
+t3 = time.time()
+
+procedure()
+
+print(time.time() - t3, "seconds wall time")
+
+29.172051191329956 seconds wall time
+
+# time ctime() Method
+
+#
+
+# method ctime() converts a time expressed in seconds since the epoch to a string representing local 
+time. If secs is not provided or None, the current time as returned by time() is used. This function is equivalent to asctime(localtime(secs)). Locale information is not used by ctime().
+
+# time.ctime([ sec ])
+
+import time
+
+print("time.ctime() : %s" % time.ctime())
+
+time.ctime() : Fri Jan 22 20:32:12 2016
+
+import time
+
+print("time.ctime() : %s" % time.ctime())
+
+time.ctime() : Fri Jan 22 20:32:36 2016
+
+# time gmtime() Method
+
+# method gmtime() converts a time expressed in seconds since the epoch to a struct_time in UTC in which the dst flag is always zero. If secs is not provided or None, the current time as returned by time() is used.
+
+#
+
+# time.gmtime([ sec ])
+
+import time
+
+# time localtime() Method
+
+# method localtime() is similar to gmtime() but it converts number of seconds to local time. If secs is not provided or None, the current time as returned by time() is used. The dst flag is set to 1 when DST applies to the given time.
+
+import time
+
+# time mktime() Method
+
+# method mktime() is the inverse function of localtime(). Its argument is the struct_time or full 9-tuple and it returns a floating point number, for compatibility with time().
+
+import time
+
+n = (2015, 3, 16, 8, 12, 50, 2, 34, 0)
+
+seconds  = time.mktime(n)
+
+print("time.mktime(n): %f" % seconds)
+
+time.mktime(n): 1426515170.000000
+
+print("asctime(localtime(seonds)): %s" % time.asctime(time.localtime(seconds)))
+
+asctime(localtime(seonds)): Mon Mar 16 09:12:50 2015
+
+# time sleep() method
+
+# method sleep() suspends execution for the given number of seconds
+
+# the argument may be a floating number to indicate a more precise sleep time
+
+# actual suspension time may be less than that requested because any caught signal will terminate the 
+sleep() following execution of that signal's catching routine.
+
+# syntax time.sleep(t)
+
+import time
+
+print ("Start : %s" % time.ctime())
+
+Start : Fri Jan 22 20:49:25 2016
+
+time.sleep(10)
+
+print("end: %s" % time.ctime())
+
+end: Fri Jan 22 20:50:15 2016
+
+# time strftime() Method
+
+# method strftime() converts a tuple or struct_time representing a time as returned by gmtime() or 
+localtime() to a string as specified by the format argument
+
+# syntax time.strftime(format[, t])
+
+# there many directive options
+
+# v
+
+# %a - abbreviated weeday name
+
+# A full weekday name
+
+# %b abbreviated month name
+
+# %B full month name
+
+# %c preferred date and time represent
+
+# %C century number (the year divided by 100, range 00 to 99)
+
+# %d day of the month (01 to 31)
+
+# %D same as %m/%d/%y
+
+# %e day of month (1 to 31)
+
+# %g like %G, but without the century
+
+# %G 4 digit year corresponding to the ISO week number (see %V)
+
+# %h same as %b
+
+# %H hour, using a 24 hour clock (00 to 23)
+
+# %I hour, using a 12 hour clock (01 to 12)
+
+# j day of year (001 to 366)
+
+# %m monht (01 to 12)
+
+# %M minute
+
+# %n newline character
+
+# %p either am or pm according to the given time value
+
+# %r time in am or pm notation
+
+# %R time in 24 hour notation
+
+# %S second
+
+# %t tab character
+
+# %T current time, equl to %H:%M:%S
+
+# %u weekday as a number (1 to 7), Monday=1. Warning: In Sun Solaris Sunday=1
+
+# %U week number of current year starting with the first sunday as the first day of the first week
+
+# %V The ISO 8601 week number of the current year (01 to 53) where week 1 is the first week that has at least 4 days in the current year, an with Monday as the first day of the week
+
+# %W week number of the current year, starting with the first Monday as the first day of the first week
+
+# %w day of the week as a decimal, Sunday=0
+
+# %x preferred date representation without the time
+
+# %X preferred time representation with the date
+
+# %y year without a century (range 00 to 99)
+
+# %Y year including the century
+
+# %Z or %z time zone or name or abbreviation
+
+# %% a lateral % character
+
+import time
+
+t = (2009, 2, 17, 17, 3, 38, 1, 48, 0)
+
+t = time.mktime(t)
+
+print(time.strftime("%b %d %Y %H:%M:S", time.gmtime(t)))
+
+Feb 17 2009 23:03:S
+
+print(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(t)))
+
+Feb 17 2009 23:03:38
+
+print(time.strftime("%m %e %y %h:%m:%S", time.gmtime(t)))
+
+02 17 09 Feb:02:38
+
+print(time.strftime("%m %e %y %H:%M:%S", time.gmtime(t)))
+
+02 17 09 23:03:38
+
+# time strptime() Method
+
+# method strptime() parses a string representing a time according to a format. The return value is a struct_time as returned by gmtime() or localtime().
+
+# time.strptime(string[, format]) syntax
+
+import time
+
+struct_time = time.strptime("30 Nov 00", "%d %b %y")
+
+# time time() method
+
+# method time() returns the time as a floating point number expressed in seconds since the epoch, in UTC.
+
+import time
+
+print("time.time(): %f" % time.time())
+
+time.time(): 1453521505.131227
+
+print (time.localtime( time.time() ) )
+
+time.struct_time(tm_year=2016, tm_mon=1, tm_mday=22, tm_hour=21, tm_min=59, tm_sec=11, tm_wday=4, tm_yday=22, tm_isdst=0)
+
+print(time.localtime( time.time() ) )
+
+time.struct_time(tm_year=2016, tm_mon=1, tm_mday=22, tm_hour=21, tm_min=59, tm_sec=42, tm_wday=4, tm_yday=22, tm_isdst=0)
+
+print(time.asctime(time.localtime(time.time())))
+
+Fri Jan 22 22:02:27 2016
+
+# time tzset() Method
+
+# method tzset() resets the time conversion rules used by the library routines. The environment variable TZ specifies how this is done.
+
+# std offset [dst [offset [, start [/time], end [/time]]]]
+
+# time.tzset()
+
+import time
+
+import os
+
+os.environ['TZ'] = 'EST+05EDT,M4.1.0,M10.5.0'
+
+time.tzset()
+
+print(time.strftime('%X %x %Z'))
+
+22:09:51 01/22/16 Central Standard Time
+
+os.environ['TZ'] = 'AEST-10AEDT-11,M10.5.0,M3.5.0'
+
+print (time.strftime('%X %x %Z'))
+
+22:10:48 01/22/16 Central Standard Time
+
+# attribute with description
+
+time.timezone
+
+21600
+
+time.tzname
+
+('Central Standard Time', 'Central Daylight Time')
+
+# Attribute time.tzname is a pair of locale-dependent strings, which are the names of the local time zone without and with DST, respectively.
+
+#Attribute time.timezone is the offset in seconds of the local time zone (without DST) from UTC (>0 in the Americas; <=0 in most of Europe, Asia, Africa).
+
+time.timezone
+
+21600
+
+# calendar module
+
+# function with description
+
+# calendar.calendar(year,w=2,L=1,c=6)
+
+# Returns a multiline string with a calendar for year year formatted into three columns separated by c spaces. w is the width in characters of each date; each line has length 21*w+18+2*c. l is the number of lines for each week.
+
+# calendar.calendar(year,w=2,l=1,c=6)
+
+calendar.calendar(2015,w=3,l=1,c=4)
+
+'                                           2015\n\n          January                        February                        March\nMon Tue Wed Thu Fri Sat Sun    Mon Tue Wed Thu Fri Sat Sun    Mon Tue Wed Thu Fri Sat Sun\n              1   2   3   4                              1                              1\n  5   6   7   8   9  10  11      2   3   4   5   6   7   8      2   3   4   5   6   7   8\n 12  13  14  15  16  17  18      9  10  11  12  13  14  15      9  10  11  12  13  14  15\n 19  20  21  22  23  24  25     16  17  18  19  20  21  22     16  17  18  19  20  21  22\n 26  27  28  29  30  31         23  24  25  26  27  28         23  24  25  26  27  28  29\n                                                               30  31\n\n           April                           May                            June\nMon Tue Wed Thu Fri Sat Sun    Mon Tue Wed Thu Fri Sat Sun    Mon Tue Wed Thu Fri Sat Sun\n          1   2   3   4   5                      1   2   3      1   2   3   4   5   6   7\n  6   7   8   9  10  11  12      4   5   6   7   8   9  10      8   9  10  11  12  13  14\n 13  14  15  16  17  18  19     11  12  13  14  15  16  17     15  16  17  18  19  20  21\n 20  21  22  23  24  25  26     18  19  20  21  22  23  24     22  23  24  25  26  27  28\n 27  28  29  30                 25  26  27  28  29  30  31     29  30\n\n            July                          August                       September\nMon Tue Wed Thu Fri Sat Sun    Mon Tue Wed Thu Fri Sat Sun    Mon Tue Wed Thu Fri Sat Sun\n          1   2   3   4   5                          1   2          1   2   3   4   5   6\n  6   7   8   9  10  11  12      3   4   5   6   7   8   9      7   8   9  10  11  12  13\n 13  14  15  16  17  18  19     10  11  12  13  14  15  16     14  15  16  17  18  19  20\n 20  21  22  23  24  25  26     17  18  19  20  21  22  23     21  22  23  24  25  26  27\n 27  28  29  30  31             24  25  26  27  28  29  30     28  29  30\n                                31\n\n          October                        November                       December\nMon Tue Wed Thu Fri Sat Sun    Mon Tue Wed Thu Fri Sat Sun    Mon Tue Wed Thu Fri Sat Sun\n              1   2   3   4                              1          1   2   3   4   5   6\n  5   6   7   8   9  10  11      2   3   4   5   6   7   8      7   8   9  10  11  12  13\n 12  13  14  15  16  17  18      9  10  11  12  13  14  15     14  15  16  17  18  19  20\n 19  20  21  22  23  24  25     16  17  18  19  20  21  22     21  22  23  24  25  26  27\n 26  27  28  29  30  31         23  24  25  26  27  28  29     28  29  30  31\n                                30\n'
+
+calendar.calendar(2015,w=2,l=1,c=6)
+
+'                                  2015\n\n      January                   February                   March\nMo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su\n          1  2  3  4                         1                         1\n 5  6  7  8  9 10 11       2  3  4  5  6  7  8       2  3  4  5  6  7  8\n12 13 14 15 16 17 18       9 10 11 12 13 14 15       9 10 11 12 13 14 15\n19 20 21 22 23 24 25      16 17 18 19 20 21 22      16 17 18 19 20 21 22\n26 27 28 29 30 31         23 24 25 26 27 28         23 24 25 26 27 28 29\n                                                    30 31\n\n       April                      May                       June\nMo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su\n       1  2  3  4  5                   1  2  3       1  2  3  4  5  6  7\n 6  7  8  9 10 11 12       4  5  6  7  8  9 10       8  9 10 11 12 13 14\n13 14 15 16 17 18 19      11 12 13 14 15 16 17      15 16 17 18 19 20 21\n20 21 22 23 24 25 26      18 19 20 21 22 23 24      22 23 24 25 26 27 28\n27 28 29 30               25 26 27 28 29 30 31      29 30\n\n        July                     August                  September\nMo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su\n       1  2  3  4  5                      1  2          1  2  3  4  5  6\n 6  7  8  9 10 11 12       3  4  5  6  7  8  9       7  8  9 10 11 12 13\n13 14 15 16 17 18 19      10 11 12 13 14 15 16      14 15 16 17 18 19 20\n20 21 22 23 24 25 26      17 18 19 20 21 22 23      21 22 23 24 25 26 27\n27 28 29 30 31            24 25 26 27 28 29 30      28 29 30\n                          31\n\n      October                   November                  December\nMo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su\n          1  2  3  4                         1          1  2  3  4  5  6\n 5  6  7  8  9 10 11       2  3  4  5  6  7  8       7  8  9 10 11 12 13\n12 13 14 15 16 17 18       9 10 11 12 13 14 15      14 15 16 17 18 19 20\n19 20 21 22 23 24 25      16 17 18 19 20 21 22      21 22 23 24 25 26 27\n26 27 28 29 30 31         23 24 25 26 27 28 29      28 29 30 31\n                          30\n'
+
+# calendar.firstweekday()
+
+calendar.firstweekday()
+
+0
+
+# above '0' is Monday
+
+# calendar.isleap(year)
+
+calendar.isleap(2018) # returns True if is leap year else False
+
+False
+
+# calendar.leapdays(y1,y2) # return num of leap yrs in range of y1 to y2
+
+calendar.leapdays(205,2016)
+
+439
+
+# calendar.leapdays(y1,y2) # return num of leap days in range of y1 to y2
+
+# calendar.month(year,month,w=2,l=1)
+
+# Returns a multiline string with a calendar for month month of year year, one line per week plus two header lines. w is the width in characters of each date; each line has length 7*w+6. l is the number of lines for each week.
+
+calendar.month(2014,12,w=2,l=1)
+
+'   December 2014\nMo Tu We Th Fr Sa Su\n 1  2  3  4  5  6  7\n 8  9 10 11 12 13 14\n15 16 17 18 19 20 21\n22 23 24 25 26 27 28\n29 30 31\n'
+
+# calendar.monthcalendar(year,month)
+
+# Returns a list of lists of ints. Each sublist denotes a week. Days outside month month of year year are set to 0; days within the month are set to their day-of-month, 1 and up.
+
+calendar.monthcalendar(2015,6)
+
+[[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+
+# calendar.monthrange(year, month)
+
+# Returns two integers. The first one is the code of the weekday for the first day of the month month in year year; the second one is the number of days in the month. Weekday codes are 0 (Monday) to 6 (Sunday); month numbers are 1 to 12.
+
+calendar.monthrange(2016,3)
+
+(1, 31)
+
+calendar.prcal(2013,w=2,l=1,c=6)
+
+                                  2013
+
+      January                   February                   March
+Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su
+    1  2  3  4  5  6                   1  2  3                   1  2  3
+ 7  8  9 10 11 12 13       4  5  6  7  8  9 10       4  5  6  7  8  9 10
+14 15 16 17 18 19 20      11 12 13 14 15 16 17      11 12 13 14 15 16 17
+21 22 23 24 25 26 27      18 19 20 21 22 23 24      18 19 20 21 22 23 24
+28 29 30 31               25 26 27 28               25 26 27 28 29 30 31
+
+       April                      May                       June
+Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su
+ 1  2  3  4  5  6  7             1  2  3  4  5                      1  2
+ 8  9 10 11 12 13 14       6  7  8  9 10 11 12       3  4  5  6  7  8  9
+15 16 17 18 19 20 21      13 14 15 16 17 18 19      10 11 12 13 14 15 16
+22 23 24 25 26 27 28      20 21 22 23 24 25 26      17 18 19 20 21 22 23
+29 30                     27 28 29 30 31            24 25 26 27 28 29 30
+
+        July                     August                  September
+Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su
+ 1  2  3  4  5  6  7                1  2  3  4                         1
+ 8  9 10 11 12 13 14       5  6  7  8  9 10 11       2  3  4  5  6  7  8
+15 16 17 18 19 20 21      12 13 14 15 16 17 18       9 10 11 12 13 14 15
+22 23 24 25 26 27 28      19 20 21 22 23 24 25      16 17 18 19 20 21 22
+29 30 31                  26 27 28 29 30 31         23 24 25 26 27 28 29
+                                                    30
+
+      October                   November                  December
+Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su
+    1  2  3  4  5  6                   1  2  3                         1
+ 7  8  9 10 11 12 13       4  5  6  7  8  9 10       2  3  4  5  6  7  8
+14 15 16 17 18 19 20      11 12 13 14 15 16 17       9 10 11 12 13 14 15
+21 22 23 24 25 26 27      18 19 20 21 22 23 24      16 17 18 19 20 21 22
+28 29 30 31               25 26 27 28 29 30         23 24 25 26 27 28 29
+                                                    30 31
+
+# calendar.prmonth(year,month, w=2,l=1)
+
+calendar.prmonth(2013,4,w=2,l=1)
+
+     April 2013
+Mo Tu We Th Fr Sa Su
+ 1  2  3  4  5  6  7
+ 8  9 10 11 12 13 14
+15 16 17 18 19 20 21
+22 23 24 25 26 27 28
+29 30
+ 
+calendar.setfirstweekday(4)
+
+time.time
+
+<built-in function time>
+
+time.localtime()
+
+time.struct_time(tm_year=2016, tm_mon=1, tm_mday=22, tm_hour=22, tm_min=28, tm_sec=36, 
+tm_wday=4, tm_yday=22, tm_isdst=0)
+
+time.time()
+
+1453523324.831408
+
+# calendar.timegm(tupletime)
+
+# The inverse of time.gmtime: accepts a time instant in time-tuple form and returns the same instant as 
+a floating-point number of seconds since the epoch.
+
+a = time.localtime
+
+# calendar.weekday(year,month,day)
+
+# Returns the weekday code for the given date. Weekday codes are 0 (Monday) to 6 (Sunday); month numbers are 1 (January) to 12 (December).
+
+calendar.weekday(2015,5,16)
+
+5
+
+# other modules datetime, pytz, dateutil
 
 
