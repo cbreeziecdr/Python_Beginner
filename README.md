@@ -3679,4 +3679,377 @@ calendar.weekday(2015,5,16)
 
 # other modules datetime, pytz, dateutil
 
+# Python Functions
+
+# functions created by the user are called user-defined functions
+
+# need to begin a function with def keyword then function name and parentheses
+
+# the code block of a function needs to begin with a colo (:) and be indented
+
+# following is syntax of defining a function
+
+# def functionname (parameters ) :
+
+	# "function_docstring"
+	
+	# function_suite
+	
+	# return [expression]
+	
+# example
+
+def printme(str):
+
+	"this user defined function prints a passed string into this function"
+
+	print str
+
+def printme(str):
+
+	"this user defined function prints a passed string into this function"
+
+	print (str)
+
+	return
+
+# how to call a function
+
+# defining function
+
+def printme(str):
+
+	"this prints a passed string into this function"
+
+	print(str)
+
+	return;
+
+# calling printme function, user defined function
+
+printme("A result of calliing user defined printme function")
+
+A result of calliing user defined printme function
+
+printme("hi new function")
+
+hi new function
+
+def numprint(int):
+
+	"this prints a passed integer into this function"
+
+	print(int)
+
+	return;
+
+
+numprint(145)
+
+145
+
+# in python parameters or arguments are passed by reference
+
+# thus, if what an argument refers to is changed within a function then the change reflects back in calling that function
+
+# funtion being defined
+
+def changeme(mylist):
+
+	"This changes a passed list into this function"
+
+	mylist.append([1,2,3,4]);
+
+	print("Values inside the function:", mylist)
+
+	return
+
+# calling the changeme function created
+
+mylist = [14, 3, 4, 6];
+
+changeme( mylist);
+
+Values inside the function: [14, 3, 4, 6, [1, 2, 3, 4]]
+
+def changeme(mylist):
+
+	"This changes a passed list into this function"
+
+	mylist.append([15,34,27,10])
+
+	print("Values in this function:", mylist)
+
+	return
+
+
+
+mylist = [3,4,6,19]
+
+changeme(mylist)
+
+Values in this function: [3, 4, 6, 19, [15, 34, 27, 10]]
+
+
+# user defined function that overwrites existing arguments in a list:
+
+# defining such a function
+
+def replacelist(clist):
+
+	"This replaces the items in the passed list into this function"
+
+	clist = [23,19,25,16] # This assigns new reference in clist
+
+	print("Items in function:", clist)
+
+	return
+
+
+# calling user defined replacelist function
+
+clist=[10,35,98,15];
+
+replacelist(clist);
+
+Items in function: [23, 19, 25, 16]
+
+print(clist)
+
+[10, 35, 98, 15]
+
+# as seen above the values in clist are local to clist so calling clist within in the replacelsit user defined function did not change the values local to the clist list variable
+
+# There are different types of formal argument types for a function including a required argument, keyword argument, default argument, variable length argument
+
+# required arguments
+
+# required arguemnts need to written in correct positional order to match function definition exactly else a syntax error will be generated
+
+# user defined function
+
+def prntstrg(str):
+
+	"prints passed string into this function"
+
+	print(str)
+
+	return;
+
+
+# calling prntstrg user defined function
+
+var = "the lenthy string"
+
+prntstrg(var) # now function should work
+
+the lenthy string
+
+# keyword arguments
+
+# keyword arguments in function calls let caller indentify the funtion arguments by the parameter name
+
+# usage of keyword arguments can allow the skipping of some arguments or placing the in a different order
+
+# in this case python interpreter uses keywords provided to match values with parameters
+
+# defining a function
+
+def printer(str):
+
+	"prints passed string into this function"
+
+	print(str)
+
+	return;
+
+# calling user defined printer function
+
+printer(str = "last name ever first name greatest - drake" )
+
+last name ever first name greatest - drake
+
+# another example of keyword argument usage
+
+# defining function
+
+def id_experience(origin, tenure):
+
+	"prints passed info into this function"
+
+	print("Origin:", origin)
+
+	print("Age:", age)
+
+	return;
+
+
+# call id_experience function
+
+id_experience(origin= "Paris", tenure=15)
+
+Origin: Paris
+
+def id_experience(origin,tenure):
+
+	"prints passed info into this function"
+
+	print("Origin:", origin)
+
+	print("Tenure:", tenure)
+
+	return;
+
+id_experience(origin="Cali", tenure=12)
+
+Origin: Cali
+
+Tenure: 12
+
+# default arguments
+
+# defining function
+
+def printdata(name, age=25):
+
+	"This prints a passed info into this function"
+
+	print("Name:", name)
+
+	print("Age", age)
+
+	return;
+
+# now you can call printdata function
+
+printdata(age=14, name="kitten")
+
+Name: kitten
+
+Age 14
+
+printdata(name="bestie")
+
+Name: bestie
+
+Age 25
+
+# variable length argument
+
+# variable length arguments are not named in the function definition but are but in this case user may need to process function for more arguments than specified in definition of the function.
+
+# syntax for a function with non-keyword variable argument follows
+
+# def functionname([formal_args,] "var_args_tuple):
+
+# 	"funtion_docstring"
+
+#	function_suite
+
+# 	return [expression]
+
+# def functionname([formal_args,] *var_args_tuple):
+
+# 	"funtion_docstring"
+
+#	function_suite
+
+# 	return [expression]
+
+
+# function definition
+
+def printdata(term1, *vartuple):
+
+	"prints variable passed arguments"
+
+	print("Output is:")
+
+	print(term1)
+
+	for var in vartuple:
+
+		print(var)
+
+	return;
+
+
+# calling printdata function
+
+printdata(10)
+
+Output is:
+
+10
+
+printdata(70,60,50)
+
+Output is:
+
+70
+
+60
+
+50
+
+# annonymous functions
+
+# functions are classified as anonymous when they aren't declared by using the def keyword.
+
+# the lambda keyword is useable to create small anonymous functions
+
+# additional details on anonymous functions http://www.tutorialspoint.com/python/python_functions.htm
+
+# lambda [arg1 [,arg2,......argn]]:expression # syntax
+
+# example of function definition with lambda
+
+sum = lambda arg1, arg2: arg1 + arg2;
+
+# call sum as a function
+
+print("total value:", sum(15,10))
+
+total value: 25
+
+print("total value", sum(4,5))
+
+total value 9
+
+difference = lambda arg1, arg2: arg1 - arg2;
+
+print("value of differnce:", difference(10,5))
+
+value of differnce: 5
+
+# return statement
+
+# return [expression] statement exits function
+
+# define function with return statement argument
+
+def difference(arg1, arg2):
+	
+	# minus arg2 from arg1 and return difference
+
+	distance = arg1 - arg2
+	
+	print("Inside function:", distance)
+	
+	return distance;
+
+
+# call difference function with return expression
+
+distance = difference(25, 12);
+
+Inside function: 13
+
+print("outside function:", distance)
+
+outside function: 13
+
+
+# in Python, there are Global and local variables
+
 
