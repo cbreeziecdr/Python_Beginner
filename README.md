@@ -1955,4 +1955,433 @@ print(var.isdecimal());
 
 True
 
+# Lists
+
+var = ['a', 'b', 'c', 'd'];
+
+print ("var[2:3]: ", var[2:3]) # print items 2 and 3 in list
+
+var[2:3]:  ['c']
+
+# update list items
+
+list[2] = 'f'
+
+Traceback (most recent call last):
+
+  File "<pyshell#5>", line 1, in <module>
+
+    list[2] = 'f'
+
+TypeError: 'type' object does not support item assignment
+
+var[2] = 'cat' # make item 2 in list now be 'cat' instead
+
+print ("new item 2 in list called var:", var[2])
+
+new item 2 in list called var: cat
+
+# removing list iem
+
+ # removing list item
+ 
+del var[1];
+
+print ("new version of list var;", var[1])
+
+new version of list var; cat
+
+# basic list operations
+
+# concatenation with '+' and repetition with '*'
+
+len(['a', 'b', 'c', 'd']) # length
+
+4
+
+# above 'len' function provides the quantity of items in a list
+
+list1 = ['be', 'see', 'den']
+
+b = var + list1
+
+print ("combination of lists var and list1:", b)
+
+combination of lists var and list1: ['a', 'cat', 'd', 'be', 'see', 'den']
+
+print("list var 3 times:", var * 3)
+
+list var 3 times: ['a', 'cat', 'd', 'a', 'cat', 'd', 'a', 'cat', 'd']
+
+# checking if a value is in a list with membership expression
+
+'a' in var
+
+True
+
+'b' in var # is value of 'b' in the list called var
+
+False
+
+# list iteration
+
+for x in var: print (x)
+
+a
+
+cat
+
+d
+
+# above assign x variable to value of '3'
+
+# next statement above instructs for loop to print 'x' first values of var
+
+###
+
+###
+
+# Indexing, Slicing, and Matrixes
+
+#
+
+T = ['bread', 'cheese', 'jam']
+
+T[2] # offsets start at zero
+
+'jam'
+
+T[-0] # negative: count from the right
+
+'bread'
+
+T[-2] # negative: count from the right
+
+'cheese'
+
+T[1] # offsets start at zero
+
+'cheese'
+
+T[-1] # negative: count from the right
+
+'jam'
+
+T[1:] # slicing fetches sections, in this case items from item number one
+
+['cheese', 'jam']
+
+# Built-in List Functions and Methods
+
+###
+
+# List cmp() Method: compares elements of two lists.
+
+be, me = ['best', 'ever'], ['ever', 'greatest']
+
+len(['a', 'b', 'c', 'd']) # length
+
+4
+
+max(['a', 'b', 'c', 'd']) # max
+
+'d'
+
+min(['a', 'b', 'c', 'd']) # min
+
+'a'
+
+# List list() Method
+
+# The method list() takes sequence types and converts them to lists. This is used to convert a given tuple 
+into list.
+
+# Tuple are very similar to lists with only difference that element values of a tuple can not be changed 
+and tuple elements are put between parentheses instead of square bracket.
+
+l_tuple = ('apple', 'berry', 'cherry')
+
+l_list = list(l_tuple)
+
+print ("list elements:", l_list)
+
+list elements: ['apple', 'berry', 'cherry']
+
+# several list methods available
+
+####
+
+# List append() Method
+
+new = ['store', 'sale', 'clearance']
+
+new.append('garage') # 'garage' as value in the list called new
+
+print ("list after append:", new)
+
+list after append: ['store', 'sale', 'clearance', 'garage']
+
+# List count() Method
+
+# method count() returns count of how many times obj occurs in list.
+
+new = ['store', 'sale', 'clearance']
+
+print (" value of sale appears", new.count('sale'), " times")
+
+ value of sale appears 1  times
+
+print (" value of store appears", new.count('store'), " time(s)")
+
+ value of store appears 1  time(s)
+
+## List extend() Method
+
+#####
+
+# method extend() appends the contents of seq to list.
+
+####
+
+done = ['finale', 'home stretch', 'complete']
+
+conclude = ['summary', 'cool down']
+
+done.extend(conclude) # add the items of list conclude to list done
+
+print ("Extended list called done:", done)
+
+Extended list called done: ['finale', 'home stretch', 'complete', 'summary', 'cool down']
+
+# List index() Method
+
+# method index() returns the lowest index in list that obj appears.
+
+vcr = ['tape', 'film', 'movie']
+
+print ("Index position of 'movie';", vcr.index('movie'))
+
+Index position of 'movie'; 2
+
+# List insert() Method
+
+# method insert() inserts object obj into list at offset index.
+
+awal = ['left', 'bailed', 'discharged']
+
+awal.insert(1, 'retired')
+
+print ("approved list:", awal)
+
+approved list: ['left', 'retired', 'bailed', 'discharged']
+
+# List pop() Method
+
+# method pop() removes and returns last object or obj from the list.
+
+# list.pop(obj=list[-1])
+
+# obj -- This is an optional parameter, index of the object to be removed from the list.
+
+lremove = ['after', 'year', 'done', 'now']
+
+print ("Remove list dropper:", lremove.pop())
+
+Remove list dropper: now
+
+print ("Remove list dropper:", lremove.pop(1)) # item one remove
+
+Remove list dropper: year
+
+# List remove() Method
+
+# obj -- This is the object to be removed from the list.
+
+# This method does not return any value but removes the given object from the list.
+
+nlist = ['left', 'right', 'up', 'down']
+
+nlist.remove('right');
+
+print("nlist list after removal:", nlist)
+
+nlist list after removal: ['left', 'up', 'down']
+
+# List reverse() Method
+
+#  method reverse() reverses objects of list in place.
+
+# This method does not return any value but reverse the given object from the list
+
+nlist = ['left', 'right', 'up', 'down']
+
+nlist.reverse();
+
+print("nlist list reversed:", nlist)
+
+nlist list reversed: ['down', 'up', 'right', 'left']
+
+# List sort() Method
+
+# method sort() sorts objects of list, use compare func if given.
+
+# list.sort([func])
+
+# This method does not return any value but reverse the given object from the list.
+
+nlist = ['left', 'right', 'up', 'down']
+
+nlist.sort()
+
+print ("sorted list: ", nlist)
+
+sorted list:  ['down', 'left', 'right', 'up']
+
+####
+
+## Python Tuples
+
+####
+
+## Tuples are sequences, just like lists. The differences between tuples and lists are, the tuples cannot be changed unlike lists and tuples use parentheses, whereas lists use square brackets.
+
+tuple_emtpy = (); # empty tuple
+
+tuple_single_val = (15,); # tuple with a single value
+
+tuple_emtpy
+
+()
+
+tuple_single_val
+
+(15,)
+
+tuple_full = (10, 14, 213, 2134)
+
+tuple_full
+
+(10, 14, 213, 2134)
+
+# tuple items cannot be updated or changed
+
+# tuples can be concatenated
+
+tuple_sing_full = tuple_single_val + tuple_full
+
+print(tuple_sing_full)
+
+(15, 10, 14, 213, 2134)
+
+# cannot remove item from tuple
+
+tuple_full = (10, 14, 213, 2134)
+
+del tuple_full # deleting a tuple
+
+print(tuple_full)
+
+Traceback (most recent call last):
+
+  File "<pyshell#131>", line 1, in <module>
+
+    print(tuple_full)
+
+NameError: name 'tuple_full' is not defined
+
+# above error message confirms tuple named tuple_full had been deleted
+
+###
+
+len(tuple_single_val)
+
+1
+
+ntuple = ('left', 'right', 'up', 'down')
+
+tuple_full = (10, 14, 213, 2134)
+
+combo = ntuple + tuple_full # concatenation
+
+print(combo)
+
+('left', 'right', 'up', 'down', 10, 14, 213, 2134)
+
+tuple_full*2 # repetition
+
+(10, 14, 213, 2134, 10, 14, 213, 2134)
+
+14 in tuple_full # membership
+
+True
+
+x = 4
+
+for x in combo: print (x) # print the first x items in tuple called combo
+
+left
+
+right
+
+up
+
+down
+
+10
+
+14
+
+213
+
+2134
+
+# Indexing, Slicing, and Matrixes
+
+##
+
+##
+
+tuple_full = (10, 14, 213, 2134)
+
+tuple_full[2] # Offsets start at zero
+
+213
+
+tuple_full[-2] # Negative: count from the right starting with '-1'
+
+213
+
+tuple_full[1:3] # Slicing fetches sections
+
+(14, 213)
+
+####
+
+# Slicing fetches sections
+
+####
+
+# Any set of multiple objects, comma-separated, written without identifying symbols, i.e., brackets for lists, parentheses for tuples, etc., default to tuples, as indicated in these short examples −
+
+tuple_full = (10, 14, 213, 2134)
+
+len( tuple_full) # length
+
+4
+
+max( tuple_full) # max
+
+2134
+
+min( tuple_full) # min
+
+10
+
+c_list = [ 12, 134, 64, 43, 27] # list variable
+
+tuple(c_list) # converting list variable into a tuple
+
+(12, 134, 64, 43, 27)
+
+
 
