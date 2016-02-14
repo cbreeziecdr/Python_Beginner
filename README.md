@@ -4052,4 +4052,308 @@ outside function: 13
 
 # in Python, there are Global and local variables
 
+user = input("Enter your input: ");
+
+Enter your input: sunday
+
+print("day is ", user)
+
+day is  sunday
+
+# renaming and deleting files
+
+# renaming and deleting function part of Python OS module, need import
+
+# rename() method: os.rename(current_file_name, new_file_name)
+
+import os # importing the Python os module
+
+os.rename("hello.py", "first.py")
+
+file = open("first.py")
+
+file.closed
+
+False
+
+detail = file.read()
+
+
+print("position ", file.tell())
+
+position  0
+
+print(detail)
+
+detail
+
+''
+
+file.close()
+
+file.closed
+
+True
+
+file = open("first.py", "r+")
+
+file.closed
+
+False
+
+detail = file.read()
+
+print("position ", file.tell())
+
+position  0
+
+print(detail)
+
+os.rename("lion.txt", "panther.txt")
+
+file = open("panther.txt", "r+")
+
+file.closed
+
+False
+
+detail = file.read()
+
+print(detail)
+
+tigers have stripes.
+
+print("position ", file.tell())
+
+position  22
+
+file.name
+
+'panther.txt'
+
+file.write(" \n there are many feline animals. \n")
+
+35
+
+file.close()
+
+file = open("panther.txt", "r+")
+
+file.closed
+
+False
+
+detail = file.read()
+
+print(detail)
+
+tigers have stripes.
+ 
+ there are many feline animals. 
+
+
+# remove() method: to delete files ; os.remove(file_name)
+
+import os
+
+text = open("old_file.txt", "r+")
+
+words = text.read()
+
+print(words)
+
+tigers have stripes.
+ 
+ there are many feline animals. 
+
+text.name
+
+'old_file.txt'
+
+text.mode
+
+'r+'
+
+text.close()
+
+text.closed
+
+True
+
+import os
+
+os.remove("old_file.txt") # deleting file with remove() method
+
+message = open("old_file.txt") # testing if still exists
+
+Traceback (most recent call last):
+
+  File "<pyshell#78>", line 1, in <module>
+
+    message = open("old_file.txt") # testing if still exists
+
+FileNotFoundError: [Errno 2] No such file or directory: 'old_file.txt'
+
+
+# OS module has methods for creating, removing, changing directories
+
+# mkdir() method in OS module, create directories in current directory
+
+# mkdir() method: os.mkdir("newdir")
+
+import os # importing os module
+
+os.mkdir("data") # create directory "data"
+
+# chdir() Method: os.chdir("newdir")
+
+import os
+
+# getcwd() method: displays the current working directory; os.getcwd()
+
+import os
+
+os.getcwd() # get current working directory path
+
+'C:\\Users\\ndikuman\\AppData\\Local\\Programs\\Python\\Python35-32'
+
+#C:\Users\ndikuman\AppData\Local\Programs\Python\Python35-32 is folder path
+
+# working directory path uses double back slashes
+
+os.chdir("C:\\Users\\ndikuman\\AppData\\Local\\Programs\\Python\\Python35-32\\data")
+
+os.getcwd()
+
+'C:\\Users\\ndikuman\\AppData\\Local\\Programs\\Python\\Python35-32\\data'
+
+file.name
+
+'panther.txt'
+
+os.chdir("C:\\Users\\ndikuman\\AppData\\Local\\Programs\\Python\\Python35-32")
+
+file.name
+
+'panther.txt'
+
+file = open("panther.txt")
+
+file.closed
+
+False
+
+file.close()
+
+file.closed
+
+True
+
+os.chdir("C:\\Users\\ndikuman\\AppData\\Local\\Programs\\Python\\Python35-32\\data")
+
+file = open("panther_data.txt")
+
+info = file.read()
+
+print("file text: ", info)
+
+file text:  tigers have stripes.
+ 
+ there are many feline animals. 
+
+file.close
+
+<built-in method close of _io.TextIOWrapper object at 0x02D98DB0>
+
+file.closed
+
+False
+
+file.close()
+
+file.closed
+
+True
+
+# rmdir() Method: deletes the directory; os.rmdir('dirname')
+
+import os
+
+os.mkdir('tester')
+
+os.mkdir('allfull') # new directory 'allfull'
+
+os.rmdir('allfull') # deleting directory 'allfull'
+
+# Python 'File' Object Methods provides functions to manipulate files
+
+# file.close() - close file
+
+# file.flush() - Flush the internal buffer, like stdio's fflush. This may be a no-op on some file-like objects.
+
+# file.fileno() - Returns the integer file descriptor that is used by the underlying implementation to request I/O operations from the operating system.
+
+# file.isatty() - Returns True if the file is connected to a tty(-like) device, else False.
+
+# file.next() - Returns the next line from the file each time it is being called.
+
+# file.read([size]) - 	
+
+file.read([size])
+
+# file.read([size]) Reads at most size bytes from the file (less if the read hits EOF before obtaining size bytes).
+
+# file.readline([size] Reads one entire line from the file. A trailing newline character is kept in the string.
+
+# file.readlines([sizehint]) Reads until EOF using readline() and return a list containing the lines. If the optional sizehint argument is present, instead of reading up to EOF, whole lines totalling approximately sizehint bytes (possibly after rounding up to an internal buffer size) are read.
+
+# file.seek(offset [, whence]) Sets the file's current position
+
+# file.tell() Returns the file's current position
+
+# file.truncate([size]) Truncates the file's size. If the optional size argument is present, the file is truncated to (at most) that size.
+
+# file.write(str) Writes a string to the file. There is no return value.
+
+# file.writelines(sequence) Writes a sequence of strings to the file. The sequence can be any iterable object producing strings, typically a list of strings.
+
+# Python OS Object Method - provides methods to process files as well as directories.
+
+
+# os.access(path, mode) Use the real uid/gid to test for access to path.
+
+# os.chdir(path) Change the current working directory to path
+
+# os.chflags(path, flags) Set the flags of path to the numeric flags.
+
+# os.chmod(path, mode) Change the mode of path to the numeric mode.
+
+# os.chown(path, uid, gid) Change the owner and group id of path to the numeric uid and gid.
+
+# os.chroot(path) Change the root directory of the current process to path.
+
+# os.close(fd) Close file descriptor fd.
+
+# os.dup(fd) Return a duplicate of file descriptor fd.
+
+
+# os.getcwd() Return a string representing the current working directory.
+
+# os.open(file, flags[, mode]) Open the file file and set various flags according to flags and possibly its mode according to mode.
+
+# os.remove(path) Remove the file path.
+
+# os.rename(src, dst) Rename the file or directory src to dst.
+
+# os.renames(old, new) Recursive directory or file renaming function.
+
+# os.rmdir(path) Remove the directory path
+
+# os.unlink(path) Remove the file path.
+
+# os.write(fd, str) Write the string str to file descriptor fd. Return the number of bytes actually written.
+
+
+# Additional Pyhton OS Module functions: http://www.tutorialspoint.com/python/os_file_methods.htm
+
 
