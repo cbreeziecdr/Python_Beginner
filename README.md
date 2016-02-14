@@ -4581,3 +4581,31 @@ class Networkerror(RuntimeError): # an exception related to RuntimeError
 
 		self.args = arg
 
+# Python - Object Oriented Programming
+
+# There several key components in Object Oriented Programming to be detailed below
+
+# Components include: class, class variable, data member, function overloading, instance variable, inheritance, instantiation, method, object, operator overloading
+
+# Creating a class
+
+# syntax
+
+# class ClassName:
+
+#	'Optional class documentation string'
+
+# 	class_suite
+
+# access documentation string via ClassName._doc_
+
+# class_suite: includes all component statements defining class members, data attributes, and functions
+
+class Employee: # In this example class_name is 'Employee'
+
+	'Common base class for all employees' # documentation string
+
+	empCount = 0
+
+	
+def _init
