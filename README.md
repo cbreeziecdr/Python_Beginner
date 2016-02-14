@@ -4357,3 +4357,227 @@ file.read([size])
 # Additional Pyhton OS Module functions: http://www.tutorialspoint.com/python/os_file_methods.htm
 
 
+# Python Exceptions Handling
+
+# Exception Handling and Assertions are two methods available to handle unexpected error and add debugging capabilities
+
+
+# KeyboardInterrupt: Raised when the user interrupts program execution, usually by pressing Ctrl+c.
+
+# http://www.tutorialspoint.com/python/python_exceptions.htm
+
+# Details on Python Exception Handling and Assertions are at above link
+
+# Assertion in Python: assertion is a sanity-check that you can turn on or turn off when you are done with your testing of the program.
+
+# Assertions are often put at beginning of function to check for valid input and after a function call to verify for valid output
+
+
+# assert Expression[, Arguments]  syntax for assert
+
+
+# If the assertion fails, Python uses ArgumentExpression as the argument for the AssertionError.
+
+# Exception exemplifies a Python object that represents an error.
+
+# Python must either fix the exception right away or python script terminates and quits
+
+# A "try:" block followed  by "except" statements and ended by "else:" statements can be used to surround code that may be suspicious
+
+try :
+	
+	fl = open("testfile", "w")
+	
+	fl.write("This is a sample file for exception handling.")
+
+except IOError:
+	
+	print("Error: can\'t find file or read data")
+
+else:
+
+	print("Written content in the file with no issues")
+
+	fl.close()
+
+	
+45
+
+Written content in the file with no issues
+
+fl = open("testfile", "r")
+
+fl.read()
+
+'This is a sample file for exception handling.'
+
+
+# following example attempts to open a file to which user does not have access permission
+
+try:
+
+	tx = open("testfile", "r")
+
+	tx.write("This is the sample file for exception handling.")
+
+except IOError:
+
+
+	print("Error: can\'t find file or read data")
+
+else:
+
+	print("Written content in the file with no issues"ArithmeticError)
+	
+SyntaxError: invalid syntax
+
+try:
+
+	tx = open("testfile", "r")
+
+	tx.write("This is the sample file for exception handling.")
+
+except IOError:
+
+	print("Error: can\'t find file or read data")
+
+else:
+
+	print("Written content in the file with no issues")
+
+	
+Error: can't find file or read data
+
+# example of using except statement with no exceptions defined:
+
+# best practice is to do a try - except statement that indicates the root cause of the problem that may come up
+
+# except Clause with Multiple Exceptions
+
+# try:
+
+ #  You do your operations here;
+
+   ......................
+
+# except(Exception1[, Exception2[,...ExceptionN]]]):
+
+  #  If there is any exception from the given exception list, 
+
+  #  then execute this block.
+
+
+# try-finally clause: finally block is a location to put any code that must execute, whether the try-block raised an exception or not
+
+# try:
+
+#   You do your operations here;
+
+# try-finally clause example
+
+try:
+
+	tp = open("sampletxt", "w")
+
+	tp.write("This is a sample file for exception handling.")
+
+finally:
+
+	print("Error: can\'t find file or read data")
+
+	
+45
+
+Error: can't find file or read data
+
+
+try:
+
+	br = open("testfile", "w")
+
+	try:
+
+		br.write("This my test file for exception handling.")
+
+	finally:
+
+		print("Going to close the file")
+
+		br.close()
+
+except IOError:
+
+	print("Error: can\'t find file or read data")
+
+	
+41
+
+Going to close the file
+
+# providing an argument of an exception
+
+# try:
+
+# 	You do your operations here;
+
+# exception ExceptionType, Argument:
+
+# You can print value of Argument here...
+
+# example below of single exception:
+
+# def temp_convert(var):
+
+   
+#  Call above function here.
+
+var = 10
+
+def temp_convert(var):
+
+	try:
+
+		return int(var)
+
+	except (ValueError, Argument):
+
+		print("The argument does not contain numbers\n", Argument)
+
+		
+
+# raising an exception: raise [Exception [, args [, traceback]]]
+
+# def functionName( level ):
+
+def functionName( level):
+
+	if level  < 1:
+
+		raise ("Invalid level", level)
+
+	# the code below this would not be executed
+
+	# if we raise the exception
+
+# to catch exception one needs to use an "except" clause that refers to the sample exception which is either a class object or simple string
+
+# try:
+
+#	Business Logic here...
+
+# except "Invalid level":
+
+#	Exception handling here...
+
+# else:
+
+# 	Rest of the code here...
+
+# creating own new exeption
+
+class Networkerror(RuntimeError): # an exception related to RuntimeError
+
+	def _init_(self, arg):
+
+		self.args = arg
+
