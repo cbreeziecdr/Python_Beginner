@@ -4609,3 +4609,466 @@ class Employee: # In this example class_name is 'Employee'
 
 	
 def _init
+
+# Python Objected Oriented Programming
+
+class Employee:
+
+	'Common base class for all employees'
+
+	empCount = 0
+
+	
+def _init_(self, name, salaray):
+
+	self.name = name
+
+	self.salary = salary
+
+	Employee.empCount += 1
+
+	
+def displayCont(self):
+
+	print("Total Employee %d" % Employee.empCount)
+
+	
+def displayEmployee(self):
+
+	print("Name : ", self.name ," Salary: ", self.salary)
+
+def _init_(self, name, salary):
+
+	self.name = name
+
+	self.salary = salary
+
+	Employee.empCount += 1
+
+	
+print(_init_)
+
+<function _init_ at 0x02ADBF60>
+
+def _init_(self, name, salary):
+
+	self.name = "Ben"
+
+	self.salary = "150k"
+
+class Employee:
+
+   'Common base class for all employees'
+
+   empCount = 0
+
+   def __init__(self, name, salary):
+
+      self.name = name
+
+      self.salary = salary
+
+      Employee.empCount += 1
+   
+   def displayCount(self):
+
+     print "Total Employee %d" % Employee.empCount
+
+   def displayEmployee(self):
+
+      print "Name : ", self.name,  ", Salary: ", self.salary
+
+"This would create first object of Employee class"
+
+emp1 = Employee("Zara", 2000)
+
+"This would create second object of Employee class"
+
+emp2 = Employee("Manni", 5000)
+
+emp1.displayEmployee()
+
+emp2.displayEmployee()
+
+class Employee:
+
+   'Common base class for all employees'
+
+   empCount = 0
+
+   def __init__(self, name, salary):
+
+      self.name = name
+
+      self.salary = salary
+
+      Employee.empCount += 1
+   
+   def displayCount(self):
+
+     print ("Total Employee %d" % Employee.empCount)
+
+   def displayEmployee(self):
+
+      print ("Name : ", self.name,  " Salary: ", self.salary)
+
+"This would create first object of Employee class"
+
+emp1 = Employee("Zara", 2000)
+
+"This would create second object of Employee class"
+
+emp2 = Employee("Manni", 5000)
+
+emp1.displayEmployee()
+
+emp2.displayEmployee()
+
+class Employee:
+
+   'Common base class for all employees'
+
+   empCount = 0
+
+   def __init__(self, name, salary):
+
+      self.name = name
+
+      self.salary = salary
+
+      Employee.empCount += 1
+   
+   def displayCount(self):
+
+     print ("Total Employee %d" % Employee.empCount)
+
+   def displayEmployee(self):
+
+      print ("Name : ", self.name,  " Salary: ", self.salary)
+    
+"This would create first object of Employee class"
+
+emp1 = Employee("Zara", 2000)
+
+"This would create second object of Employee class"
+
+emp2 = Employee("Manni", 5000)
+
+emp1.displayEmployee()
+
+emp2.displayEmployee()
+
+# "This would create first object of Employee class"
+
+emp1 = Employee("Zara", 2000)
+
+# "This would create second object of Employee class"
+
+emp2 = Employee("Manni", 5000)
+
+emp1.displayEmployee()
+
+Name :  Zara  Salary:  2000
+
+emp2.displayEmployee()
+
+Name :  Manni  Salary:  5000
+
+print ("Total Employee %d" % Employee.empCount)
+
+Total Employee 2
+
+
+emp1.age = 7 # Adding an 'age' attribute to emp1 of class
+
+emp1.displayEmployee()
+
+Name :  Zara  Salary:  2000
+
+print(emp1.age)
+
+7
+
+emp1.age = 8 # modifying 'age' attribute in emp1 of class
+
+print(emp1.age)
+
+8
+
+del emp1.age # deleting 'age' attribute from emp1 of class
+
+hasattr(emp1, 'age') # returns true if 'age' attribute exists
+
+False
+
+emp1.age = 17 # Adding an 'age' attribute to emp1 of class
+
+getattr(emp1, 'age') # returns value of 'age' attribute
+
+17
+
+hasattr(emp1, 'age')    # Returns true if 'age' attribute exists
+
+True
+
+setattr(emp1, 'age', 13) # set attribute 'age' at 13
+
+getattr(emp1, 'age') # returns value of 'age' attribute
+
+13
+
+delattr(emp1, 'age') # deletes sttribute 'age'
+
+hasattr(emp1, 'age')  # verify 'age' attribute deletion
+
+False
+
+# all Python classes have some of same built-in attributes accessible via dot operator
+
+# _dict_ - dictionary containing the class's name space
+
+# _doc_ - class documentation string or none, if it has been defined
+
+# _name_ - name of class
+
+# _module_ - This is the module name in which the class is defined. The value is _main_ in interactive mode
+
+# _bases_ possibly empty tuple containing base classes, in order of their occurrence in base class list
+
+class Employee:
+
+	'Common base class for all employees'
+
+	empCount = 0
+
+
+def _init_(self, name, salary):
+
+	self.name = name
+
+	self.salary = salary
+
+	Employee.empCount += 1
+
+	
+def displayCount(self):
+
+	print("Total Employee %d" % Employee.empCount)
+
+	
+def displayEmployee(self):
+
+	print("Name : ", self.name, "Salary: ", self.salary)
+
+	
+print ("Employee.__doc__:", Employee.__doc__)
+
+Employee.__doc__: Common base class for all employees
+
+print ("Employee.__name__:", Employee.__name__)
+
+Employee.__name__: Employee
+
+print ("Employee.__module__:", Employee.__module__)
+
+Employee.__module__: __main__
+
+print ("Employee.__bases__:", Employee.__bases__)
+
+Employee.__bases__: (<class 'object'>,)
+
+print ("Employee.__dict__:", Employee.__dict__)
+
+Employee.__dict__: {'__module__': '__main__', '__doc__': 'Common base class for all employees', '__dict__': <attribute '__dict__' of 'Employee' objects>, 'empCount': 0, '__weakref__': <attribute '__weakref__' of 'Employee' objects>}
+
+# "The process by which Python periodically reclaims blocks of memory that no longer are in use is termed Garbage Collection."
+
+# http://www.tutorialspoint.com/python/python_classes_objects.htm
+
+d = 24 # create object <24>
+
+e = d # increase ref. count of <24>
+
+f = [e] # increase ref. count of <24>
+
+del d # decrease ref. count of <24>
+
+e = 48 # decrease ref. count of <24>
+
+f[0] = -14 # decrease ref. count of <24>
+
+# __del__() - destructor is special method that prints class name of instance that is about to be destroyed
+
+class Point: # defining class 'Point'
+
+	def __init(self, x=0, y=0):
+
+		self.x = x
+
+		self.y = y
+
+	def __del__(self):
+
+		class_name = self.__class__.__name__
+
+		print(class_name, "destroyed")
+
+		
+pt1 = Point()
+
+pt2=pt1
+
+pt3=pt1
+
+print (id(pt1), id(pt2), id(pt3)) # prints ids of the objects
+
+45040624 45040624 45040624
+
+del pt1
+
+del pt2
+
+del pt3
+
+Point destroyed
+
+# Class inheritance: allows a new class to adopt the attributes in an existing class; put parent class name in parentheses after the name of child class name
+
+# class SubClassName (ParentClass1 [, ParentClass2, ...]):
+
+#	'Optional class documentation string'
+
+#	class_suite
+
+class Parent: # define parent class
+
+	parentAttr = 0
+
+	def __init__(self):
+
+		print("Calling parent constructor")
+
+		
+def parentMethod(self):
+
+	print('Calling parent method')
+
+	
+def setAttr(self, attr):
+
+	Parent.parentAttr = attr
+
+	
+def getAttr(self):
+
+	print("Parent attribute : ", Parent.parentAttr)
+
+	
+class Child(Parent): #define child class
+
+	def __init_(self):
+
+		print("Calling child constructor")
+
+		
+def childMethod(self):
+
+	print('Calling child method')
+
+	
+c = Child() # instance of child
+
+Calling parent constructor
+
+  
+def ChildMethod(self):
+
+	print('Calling child method')
+
+	
+c = Child()
+
+Calling parent constructor
+
+self = "team"
+
+Child.__init__(self)
+
+Calling parent constructor
+
+c = Child()
+
+Calling parent constructor
+
+c = childMethod(self)
+
+Calling child method
+
+c = parentMethod(self)
+
+Calling parent method
+
+c = setAttr(self, attr)
+
+print(c)
+
+None
+
+c = getAttr(self)
+
+Parent attribute :  200
+
+
+# can derive a new class from more than one parent class
+
+# class A:  define Class A
+
+# class B:  define Class B
+
+# class C (A, B):  subclass of A and B
+
+# issubclass(sub, sup) returns true if given subclass sub is a subclass of superclass sup
+
+# isinstance(obj, Class) returns true if obj is an instance of class Class or is an instance of subclass of Class
+
+# can override methods from parent class methods in case want different abilities in new subclass
+
+class Momma: # define parent class
+
+	def myMethod(me):
+
+		print("Calling parent method")
+
+		
+class Mini(Parent): # define child class
+
+	def myMethod(me):
+
+		print("Calling child method")
+
+		
+c = Mini() # instance of child
+
+Calling parent constructor
+
+self = 'group'
+
+me = 'team'
+
+c = Mini.myMethod(me)
+
+Calling child method
+
+
+# Base Overloading Methods - several generic functionality that can override in a class
+
+# __init__ ( self [,args...] ) Constructor (with any optional arguments)
+
+# __del__( self ) Destructor, deletes an object ex. del obj
+
+# __repr__( self ) Evaluatable string representation ex. repr(obj)
+
+# __str__( self ) Printable string representation ex. str(obj)
+
+# 	__cmp__ ( self, x ) Object comparison ex. cmp(obj, x
+
