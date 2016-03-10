@@ -5072,3 +5072,258 @@ Calling child method
 
 # 	__cmp__ ( self, x ) Object comparison ex. cmp(obj, x
 
+# Python - Overloading Operators
+
+# an example of creating a class for vector addition
+
+class Vector: # defining class
+
+	def __init__(self, a, b):
+
+	self.a = a
+
+	self.b - b
+
+	
+def __str__(self):
+
+	return 'Vector (%d, %d)' % (self.a, self.b)
+
+def __add__(self, other):
+
+	return Vector(self.a + other.a, self.b + other.b)
+
+# Python - Data Hiding
+
+# can make class attributes not visible outside of class by having the class attribute name be preceded by a double underscore prefix
+
+class JustCounter: # example of a class with class attributes hidden
+
+	__secretCount = 0 # hidden attribute
+
+	
+def count(self):
+
+	self.__secretCount += 1
+
+	print(self.__secretCount)
+
+	
+counter = JustCounter()
+
+# above error message is generate given class attribute __secretCount had be hidden to outside of class
+
+# attribute name changed to being object._className__attrName format
+
+print (counter._JustCounter__secretCount)
+
+0
+
+print (counter._JustCounter__secretCount)
+
+0
+
+counter = JustCounter()
+
+print(counter)
+
+<__main__.JustCounter object at 0x02D4CF10>
+
+class JustCounter: # example of a class with class attributes hidden
+
+	__secretCount = 0 # hidden attribute
+
+	def count(self):
+
+		self.__secretCount += 1
+
+		print(self.__secretCount)
+
+counter = JustCounter()
+
+counter.count()
+
+1
+
+counter.count()
+
+2
+
+print (counter._JustCounter__secretCount)
+
+2
+
+# Python - Regular Expression
+
+# "special sequence of characters that helps you match or find other strings or sets of strings, using a specialized syntax held in a pattern"
+
+# "module re - support for Perl-like regular expressions in Python - raises the exception re.error if an error occurs while compiling or using a regular expression"
+
+# Raw Strings as r'expression'
+
+# match function - "attempts to match RE pattern to string with optional flags"
+
+# re.match(pattern, string, flag=0)
+
+# pattern - This is the regular expression to be matched
+
+# string - This is the string, which would be searched to match the pattern at the beginning of string.
+
+# flags - different flags using bitwise OR (|).
+
+# if re.match function finds a match then return 'match' else 'None'
+
+# group(num=0) - 	This method returns entire match (or specific subgroup num)
+
+# groups() - 	This method returns all matching subgroups in a tuple (empty if there weren't any)
+
+import re # importing the re module
+
+line = "It rains alot in  Seattle"
+
+matchObj = re.match( r'(.*) are (.*?) .*', line, re.M|re.I)
+
+if matchObj:
+
+	print("matchObj.group() : ", matchObj.group())
+
+	print("matchObj.group(1) : ", matchObj.group(1))
+
+	print("matchObj.group(2) : ", matchObj.group(2))
+
+else:
+
+	print("No match.")
+	
+No match.
+
+line = "Cats are smarter than dogs"
+
+matchObj = re.match( r'(.*) are (.*?) .*', line, re.M|re.I)
+
+if matchObj:
+
+	print("matchObj.group() : ", matchObj.group())
+
+	print("matchObj.group(1) : ", matchObj.group(1))
+
+	print("matchObj.group(2) : ", matchObj.group(2))
+
+else:
+
+	print("No match.")
+	
+matchObj.group() :  Cats are smarter than dogs
+
+matchObj.group(1) :  Cats
+
+matchObj.group(2) :  smarter
+
+# Python - Match Versus Searching
+
+# Match looks for match only at start of string
+
+# Search looks for match anywhere in string (default for Perl)
+
+import re
+
+line = "Cats are smarter than dogs";
+
+matchObj = re.match(r'dog', line, re.M|re.I)
+
+if matchObj:
+
+	print ("match --> matchObj.group() : ", matchObj.group())
+
+else:
+
+	print("no match")
+	
+no match
+
+searchObj = re.search(r'dogs', line, re.M|re.I) # re.search function
+
+if searchObj:
+
+	print("search --> searchObj.group() : ", searchObj.group())
+
+else:
+
+	print("Nothing located")
+	
+search --> searchObj.group() :  dogs
+
+# for search and replace - sub method in re module
+
+# re.sub(pattern, repl, string, max=0) syntax
+
+# " replaces all occurrences of the RE pattern in string with repl, substituting all occurrences unless max provided. This method returns modified string"
+
+import re
+
+phone = "2004-959-559 # This phone number"
+
+# delete the comment in variable
+
+num = re.sub(r'#.*$', "", phone) # replace portion start wtih # with blank
+
+print("phone num : ", num)
+
+phone num :  2004-959-559 
+
+# remove anything other than digits
+
+num = re.sub(r'\D', "", phone)
+
+print("Phone num : ", num)
+
+Phone num :  2004959559
+
+# Python - Regular Expression Modifiers - Option Flags
+
+# http://www.tutorialspoint.com/python/python_reg_expressions.htm
+
+# re.I - case-insensitive matching
+
+# re.L - Interprets words according to the current locale. This interpretation affects the alphabetic group (\w and \W), as well as word boundary behavior (\b and \B).
+
+# re.M - 	Makes $ match the end of a line (not just the end of the string) and makes ^ match the start of any line (not just the start of the string).
+
+# re.S - 	Makes a period (dot) match any character, including a newline.
+
+# re.U - Interprets letters according to the Unicode character set. This flag affects the behavior of \w, \W, \b, \B.
+
+# re.X - Permits "cuter" regular expression syntax. It ignores whitespace (except inside a set [] or when escaped by a backslash) and treats unescaped # as a comment marker.
+
+# "Except for control characters, (+ ? . * ^ $ ( ) [ ] { } | \), all characters match themselves. You can escape a control character by preceding it with a backslash."
+
+# http://www.tutorialspoint.com/python/python_reg_expressions.htm
+
+# character classes for further match/search modification
+
+# ex. [Pp]ython  matches "Python" or "python"
+
+# ex. rub[ye] matches  "ruby" or "rube"
+
+# special character classes ex. \d to match a digit: [0 - 9]
+
+# repetition cases ex \d{3} matche exactly 3 digits
+
+# Nongreedy repetition ex <.*> Greedy repetition: matches "<python>perl>"
+
+# http://www.tutorialspoint.com/python/python_reg_expressions.htm
+
+# Grouping with Parentheses - ex. \D\d+ 	No group: + repeats \d
+
+# Backreferences - matches a previously matched group again
+
+# ex. ([Pp])ython&\1ails - Match python&pails or Python&Pails
+
+# Alternatives - python|perl - Match "python" or "perl"
+
+# anchor - Python$  - Match "Python" at the end of a string or line
+
+# Special Syntax with Parentheses
+
+# R(?#comment) - Matches "R". All the rest is a comment
+
